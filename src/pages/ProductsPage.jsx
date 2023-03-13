@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import {ProductsHeader} from '../components'
+import { ProductsHeader, Filters } from '../components'
 
 const ProductsPage = () => {
   return (
     <Wrapper>
-        <ProductsHeader />
+      <ProductsHeader />
+      <Filters />
     </Wrapper>
   )
 }
@@ -15,6 +16,7 @@ const Wrapper = styled.section`
  max-width: 1440px
  margin: 0 auto;
  overflow-x: hidden;
+
 `
 
 export default ProductsPage

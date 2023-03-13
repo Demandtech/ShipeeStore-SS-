@@ -185,6 +185,7 @@ const Wrapper = styled.main`
         color: var(--white);
         font-weight: 500;
         margin-top: 2rem;
+        width: 100%;
       }
     }
   }

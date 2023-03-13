@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 import { FaShoppingBag, FaBars, FaTimes } from 'react-icons/fa'
-import {Cart} from '../components'
-import { useGlobalContext } from '../context'
+import { Cart } from '../components'
+import { useCartsContext } from '../contexts/cartsContext'
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false)
   const [openCart, setOpenCart] = useState(false)
-  const {cart} = useGlobalContext()
-console.log(cart.length)
+  const { cart } = useCartsContext()
+  console.log(cart.length)
   return (
     <Wrapper>
       <div className='nav-container'>
@@ -21,28 +21,48 @@ console.log(cart.length)
         </div>
         <ul className={openNav ? 'open' : ''}>
           <li>
-            <NavLink className='nav-item' to={'/'}>
+            <NavLink
+              onClick={() => setOpenNav(false)}
+              className='nav-item'
+              to={'/'}
+            >
               Products
             </NavLink>
           </li>
           <li>
-            <NavLink className='nav-item' to={'/contact'}>
+            <NavLink
+              onClick={() => setOpenNav(false)}
+              className='nav-item'
+              to={'/contact'}
+            >
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink className='nav-item' to={'/about'}>
+            <NavLink
+              onClick={() => setOpenNav(false)}
+              className='nav-item'
+              to={'/about'}
+            >
               About Us
             </NavLink>
           </li>
           <li>
-            <NavLink className='nav-item' to={'/cart'}>
+            <NavLink
+              onClick={() => setOpenNav(false)}
+              className='nav-item'
+              to={'/cart'}
+            >
               Cart Items
             </NavLink>
           </li>
           <div className='mobile-login'>
-            <Link to={'/login'}>Sign In</Link>
-            <Link to={'/signup'}>Sign Up</Link>
+            <Link onClick={() => setOpenNav(false)} to={'/login'}>
+              Sign In
+            </Link>
+            <Link onClick={() => setOpenNav(false)} to={'/signup'}>
+              Sign Up
+            </Link>
           </div>
         </ul>
         <div className='nav-control'>
@@ -50,7 +70,7 @@ console.log(cart.length)
             <Link to={'/login'}>Sign In</Link>
             <Link to={'/signup'}>Sign Up</Link>
           </div>
-          <button className='cart-btn' onClick={()=>setOpenCart(!openCart)}>
+          <button className='cart-btn' onClick={() => setOpenCart(!openCart)}>
             <FaShoppingBag className='icon' />
             <span>{cart.length}</span>
           </button>
@@ -74,6 +94,7 @@ const Wrapper = styled.nav`
   padding: 1rem 4rem;
   position: relative;
   height: 67px;
+  z-index: 100;
 
   a {
     color: var(--white);
@@ -194,7 +215,7 @@ const Wrapper = styled.nav`
         height: 100vh;
         border-top: 2px solid var(--white);
         padding-top: 2rem;
-        z-index: 1;
+        z-index: 100;
         overflow-x: hidden;
         transition: var(--transition);
         transform: translateX(100%);

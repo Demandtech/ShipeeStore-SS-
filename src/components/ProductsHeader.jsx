@@ -65,7 +65,7 @@ const ProductsHeader = () => {
       })}
       <div className='pagination-wrapper'>
         {slides.map((_, i) => (
-          <span className={`pag ${index === i ? 'active-pag' : ''}`}></span>
+          <span key={i} className={`pag ${index === i ? 'active-pag' : ''}`}></span>
         ))}
       </div>
     </Wrapper>
