@@ -73,6 +73,7 @@ const Wrapper = styled.nav`
   color: var(--white);
   padding: 1rem 4rem;
   position: relative;
+  height: 67px;
 
   a {
     color: var(--white);
