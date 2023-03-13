@@ -1,0 +1,553 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 13 Pro",
+      "category": "Smartphones",
+      "subCategory": "iOS",
+      "price": 1199.0,
+      "rating": 4.8,
+      "stock": 10,
+      "description": "The Apple iPhone 13 Pro is the latest addition to the iPhone lineup. With a stunning 6.1-inch Super Retina XDR display, the phone offers an immersive viewing experience. The A15 Bionic chip ensures lightning-fast performance, while the triple 12MP camera system captures stunning photos and videos. With storage options ranging from 128GB to 1TB, you can store all your favorite content without worrying about running out of space. The phone supports 5G connectivity, Wi-Fi 6, and Bluetooth 5.0, ensuring that you stay connected wherever you go. If you're looking for a powerful and feature-packed phone, the Apple iPhone 13 Pro is a great choice.",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro-Midnight-Silver_09142021_big.jpg.large.jpg",
+        "https://cdn.vox-cdn.com/thumbor/e6-sK7VgQOj61UnOOohF7jKZAI8=/0x0:2040x1360/920x613/filters:focal(860x518:1186x844):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69658314/akrales_210121_4459_0111.0.jpg",
+        "https://www.telegraph.co.uk/content/dam/technology/2021/09/15/apple-iphone-13-pro-gold.jpg",
+        "https://www.macrumors.com/images-new/products/iphone-13-pro/colors/iphone-13-pro-colors-4.jpg",
+        "https://www.techradar.com/in/news/iphone-13-pro-camera-better-color-and-better-night-modes-with-telephoto-lens-boost"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nike Air Force 1",
+      "category": "Shoes",
+      "subCategory": "Sneakers",
+      "price": 90.0,
+      "rating": 4.5,
+      "stock": 11,
+      "description": "The Nike Air Force 1 is a classic sneaker that has been around since 1982. It features a leather upper and an Air-Sole unit for cushioning and comfort. The shoe is versatile and can be worn for both casual and athletic activities.",
+      "images": [
+        "header4",
+        "https://images.nike.com/is/image/DotCom/PDP_HERO_M/AJ7747_001_A_PREM/air-force-1-07-lv8-mens-shoe.jpg",
+        "https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/0b2465e5-5a8c-4b94-a0c1-2e08f27d51c1/air-force-1-07-lv8-shoe-JJnDzL.jpg",
+        "https://cdn.flightclub.com/PRODUCT_IMAGES/143778/640x480/743780_01.jpg",
+        "https://sneakernews.com/wp-content/uploads/2020/07/nike-air-force-1-07-lv8-corduroy-blue-DC1160-400-1.jpg",
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nike-air-force-1-1594926887.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy Watch 4",
+      "category": "Electronics",
+      "subCategory": "Smartwatches",
+      "price": 249.99,
+      "rating": 4.7,
+      "stock": 15,
+      "description": "The Samsung Galaxy Watch 4 is a smartwatch that runs on the Wear OS operating system. It features a 1.4-inch AMOLED display, GPS, heart rate monitoring, and is water-resistant. The watch can also be used to track workouts and monitor sleep.",
+      "images": [
+        "https://i.gadgets360cdn.com/products/wearables/large/1629425488_832_samsung_galaxy_watch_4.jpeg",
+        "https://cdn57.androidauthority.net/wp-content/uploads/2021/09/Samsung-Galaxy-Watch-4-Front-Silver-1-1200x675.jpg",
+        "https://cdn.mos.cms.futurecdn.net/8Fez22tAGeMc7tdq9M9KDN-970-80.jpg",
+        "https://www.samsung.com/us/smartwatches/galaxy-watch/galaxy-watch-4-44mm-black-sm-r890nzkaxar/_next/static/images/galaxy-watch-4-seo-1-1200x675.jpg",
+        "https://i.pcmag.com/imagery/reviews/03lRrMcV7rvuJmR4P14X9OD-4.fit_scale.size_1028x578.v_1629862351.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Force 1",
+      "category": "Shoes",
+      "subCategory": "Sneakers",
+      "price": 90.0,
+      "rating": 4.5,
+      "stock": 9,
+      "description": "The Nike Air Force 1 is a classic sneaker that has been around since 1982. It features a leather upper and an Air-Sole unit for cushioning and comfort. The shoe is versatile and can be worn for both casual and athletic activities.",
+      "images": [
+        "https://images.nike.com/is/image/DotCom/PDP_HERO_M/AJ7747_001_A_PREM/air-force-1-07-lv8-mens-shoe.jpg",
+        "https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/0b2465e5-5a8c-4b94-a0c1-2e08f27d51c1/air-force-1-07-lv8-shoe-JJnDzL.jpg",
+        "https://cdn.flightclub.com/PRODUCT_IMAGES/143778/640x480/743780_01.jpg",
+        "https://sneakernews.com/wp-content/uploads/2020/07/nike-air-force-1-07-lv8-corduroy-blue-DC1160-400-1.jpg",
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nike-air-force-1-1594926887.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Apple iPhone 13 Pro",
+      "category": "Smartphones",
+      "subCategory": "iOS",
+      "price": 1199.0,
+      "rating": 4.8,
+      "stock": 4,
+      "description": "The Apple iPhone 13 Pro is the latest addition to the iPhone lineup. With a stunning 6.1-inch Super Retina XDR display, the phone offers an immersive viewing experience. The A15 Bionic chip ensures lightning-fast performance, while the triple 12MP camera system captures stunning photos and videos. With storage options ranging from 128GB to 1TB, you can store all your favorite content without worrying about running out of space. The phone supports 5G connectivity, Wi-Fi 6, and Bluetooth 5.0, ensuring that you stay connected wherever you go. If you're looking for a powerful and feature-packed phone, the Apple iPhone 13 Pro is a great choice.",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro-Midnight-Silver_09142021_big.jpg.large.jpg",
+        "https://cdn.vox-cdn.com/thumbor/e6-sK7VgQOj61UnOOohF7jKZAI8=/0x0:2040x1360/920x613/filters:focal(860x518:1186x844):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69658314/akrales_210121_4459_0111.0.jpg",
+        "https://www.telegraph.co.uk/content/dam/technology/2021/09/15/apple-iphone-13-pro-gold.jpg",
+        "https://www.macrumors.com/images-new/products/iphone-13-pro/colors/iphone-13-pro-colors-4.jpg",
+        "https://www.techradar.com/in/news/iphone-13-pro-camera-better-color-and-better-night-modes-with-telephoto-lens-boost"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Bose QuietComfort 35 II",
+      "category": "Electronics",
+      "subCategory": "Headphones",
+      "price": 299.0,
+      "rating": 4.6,
+      "stock": 8,
+      "description": "The Bose QuietComfort 35 II are noise-canceling headphones that offer exceptional sound quality. They feature Alexa and Google Assistant integration, and can be controlled with the Bose Connect app. With up to 20 hours of battery life, these headphones are perfect for long flights or commutes.",
+      "images": [
+        "header1"
+        "https://images-na.ssl-images-amazon.com/images/I/81%2BjNVOUsJL._AC_SL1500_.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6001/6002704_sd.jpg",
+        "https://www.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/quietcomfort_35_ii_wireless/quietcomfort-35-ii-headphones-4-up-slate.jpg",
+        "https://www.themasterswitch.com/sites/default/files/inline-images/QC35-II.jpg",
+        "https://static.bhphoto.com/images/images500x500/bose_789564_0010_quietcomfort_35_ii_wireless_1551766359_1436749.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Apple iPad Air",
+      "category": "Electronics",
+      "subCategory": "Tablets",
+      "price": 599.0,
+      "rating": 4.8,
+      "stock": 10,
+      "description": "The Apple iPad Air is a powerful tablet that features a 10.9-inch Liquid Retina display, A14 Bionic chip, Touch ID, and up to 256GB of storage. With support for the Apple Pencil and Magic Keyboard, the iPad Air is perfect for both creative work and productivity tasks.",
+      "images": [
+        "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-select-wifi-silver-202009_FMT_WHH?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1598915057000",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTidtMXB8XhDdH1uK7VfuXMWmkn8q3KjzP_Yw&usqp=CAU",
+        "https://www.bhphotovideo.com/images/images2500x2500/apple_myl92ll_a_10_9_ipad_air_4th_1602734.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5985/5985616cv11d.jpg",
+        "https://cdn.vox-cdn.com/thumbor/6Z1mGTlVRlTPAgOUGo_9f6yto5Q=/0x0:2000x1125/1200x800/filters:focal(840x401:1160x721)/cdn.vox-cdn.com/uploads/chorus_image/image/67744609/iPad_Air_2020_Spotlight_Image.0.jpeg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Ninja Foodi Grill",
+      "category": "Kitchen",
+      "subCategory": "Appliances",
+      "price": 219.99,
+      "rating": 4.8,
+      "stock": 7,
+      "description": "The Ninja Foodi Grill is a versatile appliance that can grill, air fry, bake, roast, and dehydrate food. With its 500-degree cyclonic air technology, it can cook food quickly and evenly. The included grill grate and crisper basket are perfect for making burgers, veggies, and more.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71tPMVV-YsL._AC_SL1500_.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6351/6352097_sd.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_bf1bdc5a-7925-42dd-9d3c-b3e5b69ec88b?wid=488&hei=488&fmt=pjpeg",
+        "https://images-na.ssl-images-amazon.com/images/I/61Ogut1RHxL._AC_SL1500_.jpg",
+        "https://www.ninjakitchen.com/medias/FD402-GR482-1-Ninja-Foodi-Grill-Side-by-Side.png?context=bWFzdGVyfGltYWdlc3wyMzgzMjd8aW1hZ2UvcG5nfGltYWdlcy9oMjIvaGIwLzkyMDQxNTM5MjU5MzguanBnfGNlMzU1YzkzNjM2ZGQzN2E3NGQ2M2MwMmM3NzZjNzZlZmRmMzlhYmYzZWQyM2IyNWE1MTcwMjNhYmVlYzcyZmE"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Bose QuietComfort 35 II Wireless Headphones",
+      "category": "Electronics",
+      "subCategory": "Audio",
+      "price": 299.0,
+      "rating": 4.7,
+      "stock": 9,
+      "description": "The Bose QuietComfort 35 II wireless headphones are engineered with world-class noise cancellation technology to make your listening experience more immersive and enjoyable. With up to 20 hours of battery life and Alexa-enabled voice access to music, information and more, these headphones are perfect for on-the-go use.",
+      "images": [
+        "https://m.media-amazon.com/images/I/81+jNVOUsJL._AC_SL1500_.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5919/5919700_sd.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_8e4d28b7-06b4-4b7e-8a27-c5c3cc3aa3cc?wid=488&hei=488&fmt=pjpeg",
+        "https://images-na.ssl-images-amazon.com/images/I/61o0n6Imz1L._AC_SL1500_.jpg",
+        "https://www.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/quietcomfort_35_ii/product_silo_images/qc35_ii_black_EC_hero_1800x600.png"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Fitbit Charge 4 Fitness and Activity Tracker",
+      "category": "Fitness",
+      "subCategory": "Wearable Technology",
+      "price": 149.95,
+      "rating": 4.5,
+      "stock": 2,
+      "description": "The Fitbit Charge 4 fitness and activity tracker helps you stay motivated and reach your health goals. With built-in GPS, heart rate tracking, and sleep tracking, you can monitor your progress and see real-time stats on your wrist. It also features contactless payments and smartphone notifications, making it a convenient accessory for everyday use.",
+      "images": [
+        "Header 2",
+        "https://m.media-amazon.com/images/I/71smqRr0pmL._AC_SL1500_.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6411/6411212cv13d.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_f50da18e-c204-429e-8611-06e2857e253f?wid=488&hei=488&fmt=pjpeg",
+        "https://images-na.ssl-images-amazon.com/images/I/61q3zfLP03L._AC_SL1500_.jpg",
+        "https://www.fitbit.com/global/content/dam/fitbit/global/pdp/charge-4/images/watchface-1.png"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "KitchenAid Artisan Stand Mixer",
+      "category": "Kitchen Appliances",
+      "subCategory": "Mixers",
+      "price": 379.99,
+      "rating": 4.9,
+      "stock": 6,
+      "description": "The KitchenAid Artisan Stand Mixer is the perfect appliance for anyone who loves to bake. With a powerful 325-watt motor and 10 speed settings, this mixer can handle any recipe. It comes with a stainless steel mixing bowl, a wire whisk, a dough hook, and a flat beater, making it versatile for all types of baking. Plus, its sleek design will look great in any kitchen.",
+      "images": [
+        "https://m.media-amazon.com/images/I/61ZDxvZziGL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81WZ9CwrhzL.AC_SL1500.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_4d738268-8f11-4d57-a7b3-3bfb6cd5a6f5?wid=488&hei=488&fmt=pjpeg",
+        "https://images.kitchenaid.com/is/image/kitchenaid/RRK150ER?$KitchenaidZoom$&hei=1000&wid=1000",
+        "https://www.kitchenaid.com/content/dam/global/kitchenaid/countertop-appliances/stand-mixers/artisian-series/hero-KSM150PSER.png"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Samsung Galaxy S21 Ultra 5G Smartphone",
+      "category": "Electronics",
+      "subCategory": "Smartphones",
+      "price": 1199.99,
+      "rating": 4.7,
+      "stock": 0,
+      "description": "The Samsung Galaxy S21 Ultra 5G Smartphone is a powerful device with a 6.8-inch Dynamic AMOLED 2X display and 12GB of RAM. It has a 108MP camera and a 40MP front-facing camera, making it perfect for photography enthusiasts. It also features 5G connectivity, a long-lasting battery, and an S Pen for added functionality.",
+      "images": [
+        "https://m.media-amazon.com/images/I/91YdNBaFcvL.AC_SL1500.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6454/6454264_sd.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_5a49f8ee-2a60-4d26-9e9e-8f0a15a26d13?wid=488&hei=488&fmt=pjpeg",
+        "https://images.samsung.com/is/image/samsung/assets/us/smartphones/galaxy-s21-ultra/zfl/0903-Galaxy-S21-Ultra-5G-Sync-Black.jpg?$ORIGIN_JPG$",
+        "https://www.samsung.com/us/common/cmsassets/phones/galaxy-s21-ultra/pdp/gallery/s21-ultra-pdp-gallery-front-v1.png"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Dyson Cyclone V10 Absolute Cordless Vacuum",
+      "category": "Home Appliances",
+      "subCategory": "Vacuums",
+      "price": 599.99,
+      "rating": 4.7,
+      "stock": 5,
+      "description": "The Dyson Cyclone V10 Absolute Cordless Vacuum is a powerful and versatile cleaning tool. With a digital motor and up to 60 minutes of run time, it can handle even the toughest cleaning jobs. Its cyclone technology captures 99.97% of particles as small as 0.3 microns, making it perfect for those with allergies or pets. It also comes with multiple attachments for cleaning carpets, hard floors, upholstery, and more.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71JFCgJFmkL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71VRAtg0J2L.AC_SL1500.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_229b6b33-7a38-44d1-928e-74ca67d5267c?wid=488&hei=488&fmt=pjpeg",
+        "https://www.dyson.com/content/dam/dyson/images/products/features/cyclone-v10-absolute/product-features-cyclone-v10-absolute-Desktop.jpg",
+        "https://www.harveynorman.com.au/media/wysiwyg/Dyson_Webpage/Guides_and_Advice/Spotlights/Dyson-Cyclone-V10-Absolute-Cordless-Vacuum.png"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Fitbit Versa 3 Smartwatch",
+      "category": "Electronics",
+      "subCategory": "Smartwatches",
+      "price": 229.95,
+      "rating": 4.6,
+      "stock": 2,
+      "description": "The Fitbit Versa 3 Smartwatch is the perfect fitness companion. It tracks your heart rate, steps, and calories burned, and even offers guided breathing exercises. Its built-in GPS allows you to track your workouts without your phone, and its long battery life ensures that it will last all day. Plus, it can receive notifications from your phone and has Alexa built-in for added convenience.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71ZwzUZgmaL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71ZCEQwGnIL.AC_SL1500.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_b02f3923-5687-4b4c-8b22-348fbb2ab0c9?wid=488&hei=488&fmt=pjpeg",
+        "https://www.fitbit.com/global/content/dam/fitbit/global/pdp/versa-3/images/lifestyle/versa-3-carbon-back.png",
+        "https://www.fitbit.com/global/content/dam/fitbit/global/pdp/versa-3/images/hero/versa-3-hero-black.png"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Nespresso Vertuo Coffee and Espresso Maker",
+      "category": "Kitchen Appliances",
+      "subCategory": "Coffee Makers",
+      "price": 199.99,
+      "rating": 4.8,
+      "stock": 1,
+      "description": "The Nespresso Vertuo Coffee and Espresso Maker is the perfect appliance for coffee lovers. It uses Nespresso's patented Centrifusion technology to extract coffee and espresso with a smooth and rich crema. With its one-touch brewing system, you can make your favorite drinks with ease. Plus, its sleek design will look great in any kitchen.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Zb+V7wO-L.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71QGKfdnGnL.AC_SL1500.jpg",
+        "https://www.nespresso.com/ecom/medias/sys_master/public/12964862543902/VersatileMachine-1.jpg",
+        "https://www.nespresso.com/ecom/medias/sys_master/public/13259921730590/vertuo-chrome-1.png",
+        "https://images-na.ssl-images-amazon.com/images/I/71G2I-vj+0L._AC_SL1500_.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Amazon Echo Dot (4th Gen)",
+      "category": "Electronics",
+      "subCategory": "Smart Speakers",
+      "price": 49.99,
+      "rating": 4.7,
+      "stock": 6,
+      "description": "The Amazon Echo Dot (4th Gen) is the perfect addition to any smart home. With Alexa built-in, you can control your smart devices, play music, and get information with just your voice. Its sleek design and improved sound quality make it a great choice for any room in your home. Plus, with multiple color options to choose from, you can find the perfect match for your decor.",
+      "images": [
+        "header3",
+        "https://m.media-amazon.com/images/I/714Rq4k05UL.AC_SL1000.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71K2Q4kRi8L.AC_SL1000.jpg",
+        "https://target.scene7.com/is/image/Target/GUEST_a5505fc5-12fc-4cd6-9521-88eb9f63265a?wid=488&hei=488&fmt=pjpeg",
+        "https://www.lifewire.com/thmb/4bITs9q3A30RoP4O4j0oapw8m28=/1072x1072/smart/filters:no_upscale()/alexa-app-5b7c083b46e0fb0058f75796.jpg",
+        "https://www.amazon.com/images/I/71XWZjKBTbL.AC_SL1000.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Canon EOS Rebel T7 DSLR Camera",
+      "category": "Electronics",
+      "subCategory": "Cameras",
+      "price": 449.0,
+      "rating": 4.6,
+      "stock": 6,
+      "description": "The Canon EOS Rebel T7 DSLR Camera is the perfect choice for those who want to take their photography to the next level. With its 24.1 Megapixel CMOS sensor and DIGIC 4+ Image Processor, it can capture stunning photos and Full HD video. Its built-in Wi-Fi and NFC connectivity make it easy to share your photos and videos with friends and family.",
+      "images": [
+        "https://m.media-amazon.com/images/I/81fstJkUlaL._AC_SL1500_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81nWnZqsIOL._AC_SL1500_.jpg",
+        "https://www.bestbuy.com/site/canon-eos-rebel-t7-dslr-camera-with-18-55mm-lens/6321677.p?skuId=6321677",
+        "https://www.bhphotovideo.com/images/images2500x2500/canon_2727c002_eos_rebel_t7_dslr_1414665.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6321/6321677_sd.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Samsung Galaxy S21 5G",
+      "category": "Electronics",
+      "subCategory": "Smartphones",
+      "price": 799.99,
+      "rating": 4.7,
+      "stock": 12,
+      "description": "The Samsung Galaxy S21 5G is a powerful smartphone with a stunning design. Its 6.2-inch Dynamic AMOLED 2X display is perfect for streaming videos and playing games. Its triple rear camera system can capture stunning photos and videos, and its 5G connectivity ensures that you can stay connected wherever you go. Plus, with 128GB of internal storage, you can store all your photos, videos, and apps without worrying about running out of space.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Hv5P5x5XL._AC_SL1500_.jpg",
+        "https://images.samsung.com/is/image/samsung/p6pim/latin/galaxy-s21/gallery/latin-galaxy-s21-5g-g991-sm-g991bzvbcoa-front-311849130?$720_576_PNG$",
+        "https://target.scene7.com/is/image/Target/GUEST_ba52fa2a-2df7-41d3-86e1-d7874d4b7a4b?wid=488&hei=488&fmt=pjpeg",
+        "https://www.att.com/idpassets/global/devices/phones/samsung/galaxy-s21-5g/black/6875C-1.png",
+        "https://www.verizon.com/nos/skin/web/prd/img/shop/devices/samsung/sam-galaxy-s21-5g/01/sam-galaxy-s21-5g.jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Canon EOS Rebel T7 DSLR Camera",
+      "category": "Electronics",
+      "subCategory": "Cameras",
+      "price": 449.0,
+      "rating": 4.6,
+      "stock": 5,
+      "description": "The Canon EOS Rebel T7 DSLR Camera is the perfect choice for those who want to take their photography to the next level. With its 24.1 Megapixel CMOS sensor and DIGIC 4+ Image Processor, it can capture stunning photos and Full HD video. Its built-in Wi-Fi and NFC connectivity make it easy to share your photos and videos with friends and family.",
+      "images": [
+        "https://m.media-amazon.com/images/I/81fstJkUlaL._AC_SL1500_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81nWnZqsIOL._AC_SL1500_.jpg",
+        "https://www.bestbuy.com/site/canon-eos-rebel-t7-dslr-camera-with-18-55mm-lens/6321677.p?skuId=6321677",
+        "https://www.bhphotovideo.com/images/images2500x2500/canon_2727c002_eos_rebel_t7_dslr_1414665.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6321/6321677_sd.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Samsung Galaxy S21 5G",
+      "category": "Electronics",
+      "subCategory": "Smartphones",
+      "price": 799.99,
+      "rating": 4.7,
+      "stock": 4,
+      "description": "The Samsung Galaxy S21 5G is a powerful smartphone with a stunning design. Its 6.2-inch Dynamic AMOLED 2X display is perfect for streaming videos and playing games. Its triple rear camera system can capture stunning photos and videos, and its 5G connectivity ensures that you can stay connected wherever you go. Plus, with 128GB of internal storage, you can store all your photos, videos, and apps without worrying about running out of space.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Hv5P5x5XL._AC_SL1500_.jpg",
+        "https://images.samsung.com/is/image/samsung/p6pim/latin/galaxy-s21/gallery/latin-galaxy-s21-5g-g991-sm-g991bzvbcoa-front-311849130?$720_576_PNG$",
+        "https://target.scene7.com/is/image/Target/GUEST_ba52fa2a-2df7-41d3-86e1-d7874d4b7a4b?wid=488&hei=488&fmt=pjpeg",
+        "https://www.att.com/idpassets/global/devices/phones/samsung/galaxy-s21-5g/black/6875C-1.png",
+        "https://www.verizon.com/nos/skin/web/prd/img/shop/devices/samsung/sam-galaxy-s21-5g/01/sam-galaxy-s21-5g.jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Sony WH-1000XM4 Wireless Noise-Cancelling Headphones",
+      "category": "Electronics",
+      "subCategory": "Headphones",
+      "price": 348.0,
+      "rating": 4.7,
+      "stock": 3,
+      "description": "The Sony WH-1000XM4 Wireless Noise-Cancelling Headphones are the perfect choice for audiophiles who want the ultimate listening experience. With its industry-leading noise cancellation technology and 40mm drivers, these headphones deliver stunning sound quality that immerses you in your music. The headphones also feature touch controls, voice assistant support, and up to 30 hours of battery life on a single charge.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81G22yTbifL._AC_SL1500_.jpg",
+        "https://www.bestbuy.com/site/sony-wh-1000xm4-wireless-noise-cancelling-over-the-ear-headphones-black/6424175.p?skuId=6424175",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6424/6424175_sd.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6424/6424175cv13d.jpg"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Cuisinart TOB-260N1 Chef's Convection Toaster Oven",
+      "category": "Home & Kitchen",
+      "subCategory": "Kitchen Appliances",
+      "price": 199.99,
+      "rating": 4.5,
+      "stock": 2,
+      "description": "The Cuisinart TOB-260N1 Chef's Convection Toaster Oven is the perfect addition to any kitchen. With its spacious interior and convection technology, this toaster oven can cook up to six slices of bread, a 4-pound chicken, or a 12-inch pizza. The oven also features a built-in timer, multiple cooking functions, and a non-stick interior for easy cleaning.",
+      "images": [
+        "https://m.media-amazon.com/images/I/81Tfkh6EESL._AC_SL1500_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81SOoFzdz7L._AC_SL1500_.jpg",
+        "https://www.bestbuy.com/site/cuisinart-chefs-convection-toaster-oven-silver/5709099.p?skuId=5709099",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5709/5709099_sd.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5709/5709099cv11d.jpg"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Anker PowerCore 26800 Portable Charger",
+      "category": "Electronics",
+      "subCategory": "Portable Chargers",
+      "price": 59.99,
+      "rating": 4.7,
+      "stock": 1,
+      "description": "The Anker PowerCore 26800 Portable Charger is a must-have for anyone who needs to keep their devices charged while on the go. With its massive 26800mAh capacity, this portable charger can charge most smartphones up to 6 times and tablets up to 2 times on a single charge. The charger also features PowerIQ and VoltageBoost technology, which provides the fastest possible charging speed for your devices.",
+      "images": [
+        "https://m.media-amazon.com/images/I/61d9u9zVZPL._AC_SL1500_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71PAKMJX5XL._AC_SL1500_.jpg",
+        "https://www.bestbuy.com/site/anker-powercore-26800-mah-portable-charger-black/6341085.p?skuId=6341085",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6341/6341085_sd.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6341/6341085cv13d.jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+      "category": "Home & Kitchen",
+      "subCategory": "Kitchen Appliances",
+      "price": 79.99,
+      "rating": 4.7,
+      "stock": 8,
+      "description": "The Instant Pot Duo 7-in-1 Electric Pressure Cooker is the perfect appliance for anyone who wants to cook healthy and delicious meals quickly and easily. With its seven cooking functions, this pressure cooker can cook everything from rice to soup to yogurt. The pot also features a delay start timer, automatic keep-warm function, and a stainless steel inner pot that's easy to clean.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71JqMIl+AiL._AC_SL1500_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71GjsQ50EFL._AC_SL1500_.jpg",
+        "https://www.bestbuy.com/site/instant-pot-duo-6-quart-7-in-1-multi-use-pressure-cooker/6331972.p?skuId=6331972",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6331/6331972_sd.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6331/6331972cv11d.jpg"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Kindle Oasis E-reader",
+      "category": "Electronics",
+      "subCategory": "E-readers",
+      "price": 269.99,
+      "rating": 4.6,
+      "stock": 12,
+      "description": "The Kindle Oasis E-reader is the perfect device for anyone who loves to read. With its high-resolution display and adjustable warm light, you can read comfortably for hours, day or night. The Oasis is also waterproof, so you can take it to the beach or pool without worrying about damage. Plus, with access to over a million books, magazines, and newspapers, you'll never run out of reading material.",
+      "images": [
+        "https://m.media-amazon.com/images/I/61ICL1jTtxL.AC_SL1000.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/61XbnXmMbUL.AC_SL1000.jpg",
+        "https://www.bestbuy.com/site/amazon-kindle-oasis-7-8-32gb-e-reader-graphite/6321676.p?skuId=6321676",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6321/6321676cv14d.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6321/6321676cv12d.jpg"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Sennheiser HD 660 S HiRes Audiophile Headphone",
+      "category": "Electronics",
+      "subCategory": "Headphones",
+      "price": 499.95,
+      "rating": 4.7,
+      "stock": 5,
+      "description": "The Sennheiser HD 660 S HiRes Audiophile Headphone is the perfect choice for anyone who loves music. With its open-back design, the headphones deliver a natural and transparent sound that lets you hear every detail in your music. The HD 660 S also features a low impedance of 150 ohms, making it easy to drive from any device. The headphones come with a detachable cable, so you can customize the length to your liking.",
+      "images": [
+        "https://m.media-amazon.com/images/I/81IbztL96+L.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81ctP5VpByL.AC_SL1500.jpg",
+        "https://www.bestbuy.com/site/sennheiser-hd-660-s-hi-res-audiophile-headphone-black/6228619.p?skuId=6228619",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6228/6228619cv12d.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6228/6228619cv14d.jpg"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Fitbit Charge 4 Fitness and Activity Tracker",
+      "category": "Electronics",
+      "subCategory": "Fitness Trackers",
+      "price": 129.95,
+      "rating": 4.6,
+      "stock": 10,
+      "description": "The Fitbit Charge 4 Fitness and Activity Tracker is the perfect device for anyone who wants to stay on top of their fitness goals. With its built-in GPS, you can track your workouts and see your pace and distance in real-time. The tracker also monitors your heart rate, sleep, and provides personalized insights and reminders to keep you moving. Plus, with access to Fitbit Premium, you can unlock even more features and insights.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71smqRr0pmL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71ysKjh4piL.AC_SL1500.jpg",
+
+        "https://www.bestbuy.com/site/fitbit-charge-4-activity-tracker-black/6406415.p?skuId=6406415",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406415_rd.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406415cv15d.jpg"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Sony Alpha a7 III Mirrorless Camera",
+      "category": "Electronics",
+      "subCategory": "Cameras",
+      "price": 1998,
+      "rating": 4.8,
+      "stock": 7,
+      "description": "The Sony Alpha a7 III Mirrorless Camera is the perfect tool for any photographer. With its 24.2 megapixel full-frame sensor and advanced autofocus system, you can capture stunning images and videos with ease. The camera also features 5-axis stabilization, which means you can shoot handheld without worrying about shaky footage. And with its weather-sealed body, you can take the a7 III with you anywhere, whether it's in rain or shine.",
+      "images": [
+        "https://m.media-amazon.com/images/I/61bKrgITNUL.AC_SL1000.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/61V11Gjjz6L.AC_SL1000.jpg",
+        "https://www.bestbuy.com/site/sony-alpha-a7-iii-mirrorless-camera-with-28-70mm-lens-black/6213100.p?skuId=6213100",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6213/6213100cv13d.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6213/6213100_sd.jpg"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Samsung Galaxy Tab S7+ 12.4",
+      "category": "Electronics",
+      "subCategory": "Tablets",
+      "price": 799.99,
+      "rating": 4.8,
+      "stock": 10,
+      "description": "The Samsung Galaxy Tab S7+ 12.4 is the ultimate tablet for both work and play. With its 12.4-inch Super AMOLED display, you can watch movies, play games, and get work done with stunning clarity and color. The tablet also comes with an S Pen, which lets you take notes, draw, and sketch with precision. Plus, with 5G connectivity, you can stay connected on the go and get faster download speeds than ever before.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71bTWt+lxxL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71CGFX-RcDL.AC_SL1500.jpg",
+        "https://www.bestbuy.com/site/samsung-galaxy-tab-s7-12-4-256gb-with-wi-fi-bronze/6425546.p?skuId=6425546",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6425/6425546cv14d.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6425/6425546_sd.jpg"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "LG CX Series 65 inch OLED 4K Smart TV",
+      "category": "Electronics",
+      "subCategory": "TVs",
+      "price": 2099.99,
+      "rating": 4.9,
+      "stock": 2,
+      "description": "The LG CX Series 65 inch OLED 4K Smart TV is the ultimate viewing experience. With its perfect black and infinite contrast, you'll see details in dark scenes like never before. The TV also features Dolby Vision IQ and Dolby Atmos, which deliver immersive audio and video that will transport you into the scene. And with LG's webOS platform, you'll have access to all your favorite streaming services and apps.",
+      "images": [
+        "https://m.media-amazon.com/images/I/81LGdZql9SL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/91nk8WthGTL.AC_SL1500.jpg",
+        "https://www.bestbuy.com/site/lg-65-class-cx-series-oled-4k-uhd-smart-webos-tv/6401851.p?skuId=6401851",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6401/6401851_sd.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6401/6401851_rd.jpg"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Apple Watch Series 6",
+      "category": "Electronics",
+      "subCategory": "Watches",
+      "price": 399,
+      "rating": 4.9,
+      "stock": 6,
+      "description": "The Apple Watch Series 6 is the ultimate smartwatch for anyone who wants to stay connected and stay active. With its always-on Retina display, you can see all your important information at a glance, and with its advanced sensors, you can track your workouts and monitor your health like never before. The watch also features Apple Pay and Siri, so you can make payments and get assistance with just your voice. And with its customizable watch faces and bands, you can make the watch truly your own.",
+      "images": [
+        "https://m.media-amazon.com/images/I/71Bm+qXZcTL.AC_SL1500.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71WgHyk6DgL.AC_SL1500.jpg",
+        "https://www.bestbuy.com/site/apple-watch-series-6-gps-40mm-gold-aluminum-case-with-pink-sand-sport-band-gold-aluminum/6215911.p?skuId=6215911",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6215/6215911cv14d.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6215/6215911_sd.jpg"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Apple iPhone 13 Pro",
+      "category": "Electronics",
+      "subCategory": "Smartphones",
+      "price": 999,
+      "rating": 4.5,
+      "stock": 5,
+      "description": "The Apple iPhone 13 Pro features a 6.1-inch Super Retina XDR display, A15 Bionic chip, 5G connectivity, triple-camera system, and up to 1TB of storage. It also has Ceramic Shield front cover, Dolby Vision HDR recording, and ProRes video recording.",
+      "imageUrls": [
+        "https://www.apple.com/v/iphone-13-pro/f/images/meta/og__gzowxlq7pvmu_preview.png",
+        "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone13Pro_Midnight_09142021.jpg.og.jpg?202203042038",
+        "https://cdn.vox-cdn.com/thumbor/qvJ3L5-nKDXtUsZZLwB8pAv3E38=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23383531/akrales_210922_4964_0004.jpg",
+        "https://9to5mac.com/wp-content/uploads/sites/6/2021/09/iPhone-13-Pro-Gold.jpeg?quality=82&strip=all",
+        "https://cdn.vox-cdn.com/thumbor/C3vqcgx5xNfv5LLnWnN8Bv9ECks=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23383521/akrales_210922_4964_0001.jpg"
+      ]
+    }
+  ]
+}
