@@ -4,14 +4,19 @@ import App from './App'
 import { ProductsProvider } from './contexts/productsContext'
 import { CartsProvider } from './contexts/cartsContext'
 import { FiltersProvider } from './contexts/filtersContext'
+import { UserProvider } from './contexts/userContext'
+import { RouterProvider } from 'react-router-dom'
+import router from './router'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <ProductsProvider>
-    <FiltersProvider>
-      <CartsProvider>
-        <App />
-      </CartsProvider>
-    </FiltersProvider>
-  </ProductsProvider>
+  <UserProvider>
+    <ProductsProvider>
+      <FiltersProvider>
+        <CartsProvider>
+          <RouterProvider router={router} />
+        </CartsProvider>
+      </FiltersProvider>
+    </ProductsProvider>
+  </UserProvider>
 )
