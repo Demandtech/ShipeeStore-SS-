@@ -91,10 +91,14 @@ const Navbar = () => {
 const Wrapper = styled.nav`
   background: var(--navyBlue);
   color: var(--white);
-  padding: 1rem 4rem;
   position: relative;
   height: 67px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 100;
+  padding: 0 2rem;
 
   a {
     color: var(--white);
@@ -105,6 +109,8 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 67px;
 
     .logo-wrapper {
       .logo {
@@ -112,6 +118,7 @@ const Wrapper = styled.nav`
         font-weight: 600;
         border: 4px solid var(--white);
         background: var(--white);
+
         span {
           &:nth-child(1) {
             border-radius: 0.5rem;
@@ -129,6 +136,7 @@ const Wrapper = styled.nav`
       display: flex;
       gap: 2rem;
       list-style-type: none;
+      overflow-x: hidden;
 
       .nav-item {
         margin-bottom: 1rem;
@@ -170,13 +178,15 @@ const Wrapper = styled.nav`
       .cart-btn {
         all: unset;
         position: relative;
+
         .icon {
           font-size: 1.7rem;
         }
         span {
           position: absolute;
-          top: -0.75rem;
-          right: -0.75rem;
+          top: 0;
+          right: 0;
+          transform: translate(10px, -10px);
           background: red;
           width: 1.5rem;
           height: 1.5rem;
@@ -185,6 +195,7 @@ const Wrapper = styled.nav`
           display: flex;
           align-items: center;
           justify-content: center;
+          z-index: 100;
         }
       }
       .hamburger {
@@ -210,15 +221,14 @@ const Wrapper = styled.nav`
         top: 67px;
         background: var(--navyBlue);
         right: 0;
-        width: 15rem;
+        width: 0;
         align-items: center;
         height: 100vh;
         border-top: 2px solid var(--white);
         padding-top: 2rem;
         z-index: 100;
-        overflow-x: hidden;
         transition: var(--transition);
-        transform: translateX(100%);
+        // transform: translateX(100%);
 
         .mobile-login {
           display: flex;
@@ -233,7 +243,8 @@ const Wrapper = styled.nav`
       }
 
       .open {
-        transform: translateX(0);
+        // transform: translateX(0);
+        width: 15rem;
       }
 
       .nav-control {
