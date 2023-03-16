@@ -1,19 +1,19 @@
 import React from 'react'
 import './App.css'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from 'react-router-dom'
-import { SignUp, Login, ProductsPage,Contact, CartItems, About } from './pages'
-import { Navbar } from './components'
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from 'react-router-dom'
+// import { SignUp, Login, ProductsPage,Contact, CartItems, About } from './pages'
+// import { Navbar } from './components'
 
 //const url = 'https://dummyjson.com/products'
 
 function App() {
   return (
     <React.Fragment>
-      <Router>
+      {/* <Router>
         <Navbar />
         <Routes>
           <Route exact path='/login' element={<Login />} />
@@ -23,7 +23,7 @@ function App() {
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='/cart' element={<CartItems />} />
         </Routes>
-      </Router>
+      </Router> */}
     </React.Fragment>
   )
 }

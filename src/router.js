@@ -1,6 +1,6 @@
 import { createBrowserRouter} from 'react-router-dom'
 import { DefaultLayout, GuessLayout, ProtectedLayout } from './layout'
-import { ProductsPage, CartItems, Contact, Login, SignUp, About } from './pages'
+import { ProductsPage, CartItems, Contact, Login, SignUp, About, SingleProductPage } from './pages'
 
 const router = createBrowserRouter([
   {
@@ -10,6 +10,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <ProductsPage />,
+      },
+      {
+        path: '/singleproduct',
+        element: <SingleProductPage />,
       },
       {
         path: '/contact',

@@ -1,7 +1,7 @@
 import React, { useContext, createContext, useReducer } from 'react'
 import filtersReducer from '../reducers/filtersReducer'
 import {FILTER_PRODUCTS, UPDATE_FILTERS} from '../actions'
-
+import Select from '../components'
 
 
 
@@ -30,6 +30,7 @@ export const FiltersProvider = ({ children }) => {
      let value = event.target.value
      
      dispatch({type:UPDATE_FILTERS, payload:{name:name, value:value}})
+    console.log(name, value)
   }
   return (
     <FiltersContext.Provider value={{ ...state, updateFilters }}>

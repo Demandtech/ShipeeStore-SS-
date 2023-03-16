@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FaEnvelope, FaEye} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 //import {useHistory} from 'react-router-dom'
 
 const Login = () => {
@@ -39,6 +40,8 @@ const Login = () => {
             </button>
           </div>
         </form>
+        <span>Not Register ? <Link to={'/signup'}>Sign up</Link>
+        </span>
       </section>
     </Wrapper>
   )

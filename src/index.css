@@ -13,11 +13,12 @@
   --navyBlue: #000080;
   --transparentNavyBlue: #0000804f;
   --blueWhiteGradient: linear-gradient(to right, var(--white), var(--navyBlue));
-  --transition: all 0.5s linear;
+  --transition: all 0.3s linear;
 }
 
 body {
   overflow-x: hidden;
+  
 }
 
 .App {

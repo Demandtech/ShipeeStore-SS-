@@ -1,21 +1,57 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useFiltersContext } from '../contexts/filtersContext'
-//import { Select } from '../components'
-
-const options = ['phone', 'laptop', 'perfume']
+//import Select from './Select'
 
 const Filters = () => {
   const {
     updateFilters,
     filters: { brand, category, text, min_price, max_price, price },
   } = useFiltersContext()
-
+  const [openList, setOpenList] = useState(false)
+  const [value, setValue] = useState(category)
+  console.log(category, brand)
+  const options = [
+    { value: 'phone', label: 'phone' },
+    { value: 'laptop', label: 'laptop' },
+    { value: 'perfume', label: 'perfume' },
+  ]
 
   return (
     <Wrapper>
       <h2>Products</h2>
       <div className='filters-wrapper'>
+        <div className='filter-control'>
+          <div className='select-control'>
+            <input
+              onClick={() => {
+                setOpenList(!openList)
+              }}
+              name='category'
+              value={value}
+              type='text'
+              placeholder='Search by category...'
+              onChange={updateFilters}
+            />
+            {openList && (
+              <ul className='select-list'>
+                {options.map((option, index) => {
+                  return (
+                    <li
+                      key={index}
+                      onClick={(e) => {
+                        setValue(e.target.textContent)
+                        setOpenList(false)
+                      }}
+                    >
+                      {option.value}
+                    </li>
+                  )
+                })}
+              </ul>
+            )}
+          </div>
+        </div>
         <div className='price filter-control'>
           <label htmlFor='price'>Price</label>
           <div className='input-control'>
@@ -25,10 +61,10 @@ const Filters = () => {
             <input
               name='price'
               type='range'
-              onChange={updateFilters}
               min={min_price}
               max={max_price}
               value={price}
+              onChange={updateFilters}
             />
             <div className='max-price'>
               <span>{max_price}</span>
@@ -91,6 +127,12 @@ const Wrapper = styled.section`
           border-radius: 0.2rem;
           padding: 0 1rem;
           font-size: 1rem;
+          transition: var(--transition);
+
+          &:focus {
+            outline: none;
+            transform: translateY(-2px);
+          }
         }
       }
     }

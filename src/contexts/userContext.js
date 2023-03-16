@@ -5,7 +5,7 @@ const UserContext = createContext()
 
 const initialState = {
   user: {},
-  isAuthenticated: false
+  isAuthenticated: true
 }
 
 export const UserProvider = ({ children }) => {

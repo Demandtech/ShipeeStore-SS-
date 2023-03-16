@@ -3,5 +3,7 @@ import ProductsHeader from './ProductsHeader'
 import Cart from './Cart'
 import Filters from './Filters'
 import Select from './Select'
+import Product from './Product'
+import Stars from './Stars'
 
-export { Navbar, ProductsHeader, Cart, Filters, Select }
+export { Navbar, ProductsHeader, Cart, Filters, Select, Product, Stars  }
