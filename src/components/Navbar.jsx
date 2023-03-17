@@ -228,7 +228,6 @@ const Wrapper = styled.nav`
         padding-top: 2rem;
         z-index: 100;
         transition: var(--transition);
-        // transform: translateX(100%);
 
         .mobile-login {
           display: flex;
@@ -245,6 +244,7 @@ const Wrapper = styled.nav`
       .open {
         opacity: 1;
         width: 15rem;
+        transition: var(--transition);
       }
 
       .nav-control {

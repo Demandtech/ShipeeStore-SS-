@@ -32,17 +32,14 @@ const url = 'https://dummyjson.com/products'
 export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productsReducer, initialState)
  
-
   const fetchData = async (url) => {
     dispatch({ type: START_LOADING })
     try {
       const request = await fetch(url)
       const data = await request.json()
-      console.log(data)
       dispatch({type: GET_PRODUCTS, payload:{products:data.products, total:data.total}})
       dispatch({ type: STOP_LOADING })
     } catch (err) {
-      console.log(err)
       dispatch({ type: STOP_LOADING })
     } finally {
       dispatch({ type: STOP_LOADING })
@@ -55,8 +52,6 @@ export const ProductsProvider = ({ children }) => {
     }
     if (state.hasMore && window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
       dispatch({type:'LOAD_MORE_PRODUCTS'})
-      console.log('bottom')
-      console.log(state.limit, state.total)
     }
   }
 
