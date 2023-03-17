@@ -13,8 +13,8 @@ const ProductsPage = () => {
       {products.map((product, index)=>(
         <Product key={product.id} {...product}/>
       ))}
-      </div>
       {isLoading ? 'Loading...' : null}
+      </div>
     </Wrapper>
   )
 }

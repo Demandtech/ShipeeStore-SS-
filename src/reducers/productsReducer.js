@@ -12,14 +12,13 @@ const productsReducer = (state, action) => {
     case STOP_LOADING:
       return { ...state, isLoading: false }
     case GET_PRODUCTS: 
-    console.log(action.payload) 
       return {
         ...state,
         total: action.payload.total,
         products: [...action.payload.products]
       }
     case 'LOAD_MORE_PRODUCTS':
-      return{...state, limit: state.limit < state.total ? state.limit + 10 : state.limit}
+      return{...state, limit: state.limit <= state.total ? state.limit + 12 : state.limit}
         default:
       return { ...state }
     }
