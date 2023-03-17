@@ -7,23 +7,23 @@ const Product = ({ title, price, rating, thumbnail, discountPercentage }) => {
   let tempTitle = title.split(' ').slice(0, 2).join(' ')
   return (
     <Wrapper>
-      <Link to={'singleproduct'} className='product'>
-        <img src={thumbnail} alt={title} />
-        <div className='name'>
-          <p>{tempTitle}</p>
-          <div>
-            <Stars rating={rating} />
-          </div>
+      <img src={thumbnail} alt={title} />
+      <div className='name'>
+        <Link to={'singleproduct'} >
+          {tempTitle}
+        </Link>
+        <div>
+          <Stars rating={rating} />
         </div>
-        <span>Price: ${price}</span>
-        <div className='btns'>
-          <Link className='buy-btn' to={'/cart'}>
-            Buy Now
-          </Link>
-          <button className='add-btn'>Add to Cart</button>
-        </div>
-        <span className='discount'>Discount {discountPercentage}%</span>
-      </Link>
+      </div>
+      <span>Price: ${price}</span>
+      <div className='btns'>
+        <Link className='buy-btn' to={'/cart'}>
+          Buy Now
+        </Link>
+        <button className='add-btn'>Add to Cart</button>
+      </div>
+      <span className='discount'>Discount {discountPercentage}%</span>
     </Wrapper>
   )
 }
@@ -35,9 +35,7 @@ const Wrapper = styled.article`
   border-radius: 0.2rem;
   position: relative;
 
-  .product {
-    text-decoration: none;
-    height: 100%;
+ 
 
     .discount {
       position: absolute;
@@ -73,7 +71,7 @@ const Wrapper = styled.article`
         text-decoration: none;
       }
     }
-  }
+  
 `
 
 export default Product

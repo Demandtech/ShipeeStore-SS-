@@ -92,7 +92,6 @@ const Wrapper = styled.nav`
   background: var(--navyBlue);
   color: var(--white);
   position: relative;
-  height: 67px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -110,7 +109,7 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 67px;
+    height: 70px;
 
     .logo-wrapper {
       .logo {
@@ -206,7 +205,7 @@ const Wrapper = styled.nav`
   }
 
   @media screen and (max-width: 835px) {
-    padding: 1rem;
+    padding: 0 1rem;
     width: 100%;
 
     .nav-container {
@@ -222,6 +221,7 @@ const Wrapper = styled.nav`
         background: var(--navyBlue);
         right: 0;
         width: 0;
+        opacity: 0;
         align-items: center;
         height: 100vh;
         border-top: 2px solid var(--white);
@@ -243,7 +243,7 @@ const Wrapper = styled.nav`
       }
 
       .open {
-        // transform: translateX(0);
+        opacity: 1;
         width: 15rem;
       }
 

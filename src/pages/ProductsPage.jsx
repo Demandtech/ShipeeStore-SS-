@@ -4,8 +4,7 @@ import { ProductsHeader, Filters, Product } from '../components'
 import { useProductsContext } from '../contexts/productsContext'
 
 const ProductsPage = () => {
-  const {products} = useProductsContext()
-  console.log(products)
+  const {products, isLoading} = useProductsContext()
   return (
     <Wrapper>
       <ProductsHeader />
@@ -15,6 +14,7 @@ const ProductsPage = () => {
         <Product key={product.id} {...product}/>
       ))}
       </div>
+      {isLoading ? 'Loading...' : null}
     </Wrapper>
   )
 }

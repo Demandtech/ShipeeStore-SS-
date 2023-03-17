@@ -10,7 +10,7 @@ const Filters = () => {
   } = useFiltersContext()
   const [openList, setOpenList] = useState(false)
   const [value, setValue] = useState(category)
-  console.log(category, brand)
+  
   const options = [
     { value: 'phone', label: 'phone' },
     { value: 'laptop', label: 'laptop' },
