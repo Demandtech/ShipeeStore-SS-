@@ -9,7 +9,6 @@ const Navbar = () => {
   const [openNav, setOpenNav] = useState(false)
   const [openCart, setOpenCart] = useState(false)
   const { cart } = useCartsContext()
-  console.log(cart.length)
   return (
     <Wrapper>
       <div className='nav-container'>
