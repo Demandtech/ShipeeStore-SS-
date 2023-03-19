@@ -1,20 +1,40 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useFiltersContext } from '../contexts/filtersContext'
-//import Select from './Select'
+import Select from 'react-select'
+import {UPDATE_FILTERS} from '../actions'
 
 const Filters = () => {
   const {
     updateFilters,
     filters: { brand, category, text, min_price, max_price, price },
+    dispatch
   } = useFiltersContext()
-  const [openList, setOpenList] = useState(false)
-  const [value, setValue] = useState(category)
-  
+  const [selectedOption, setSelectedOption] = useState(category)
+  const [selectedBrandOption, setSelectedBrandOption] = useState(brand)
+  const handleCategorySelect = (data) => {
+    setSelectedOption(data)
+    dispatch({type:UPDATE_FILTERS, payload:{ name:data.value, value:data.label }})
+  }
+
+  const handleBrandSelect = (data) => {
+    setSelectedBrandOption(data)
+    dispatch({
+      type: UPDATE_FILTERS,
+      payload: { name: data.value, value: data.label },
+    })
+  }
+
   const options = [
-    { value: 'phone', label: 'phone' },
-    { value: 'laptop', label: 'laptop' },
-    { value: 'perfume', label: 'perfume' },
+    { value: 'category', label: 'smartPhone'},
+    { value: 'category', label: 'Electronics' },
+    { value: 'category', label: 'Perfume' },
+  ]
+
+  const brandOptions = [
+    { value: 'brand', label: 'smartPhone' },
+    { value: 'brand', label: 'Electronics' },
+    { value: 'brand', label: 'Perfume' },
   ]
 
   return (
@@ -22,35 +42,22 @@ const Filters = () => {
       <h2>Products</h2>
       <div className='filters-wrapper'>
         <div className='filter-control'>
-          <div className='select-control'>
-            <input
-              onClick={() => {
-                setOpenList(!openList)
-              }}
-              name='category'
-              value={value}
-              type='text'
-              placeholder='Search by category...'
-              onChange={updateFilters}
-            />
-            {openList && (
-              <ul className='select-list'>
-                {options.map((option, index) => {
-                  return (
-                    <li
-                      key={index}
-                      onClick={(e) => {
-                        setValue(e.target.textContent)
-                        setOpenList(false)
-                      }}
-                    >
-                      {option.value}
-                    </li>
-                  )
-                })}
-              </ul>
-            )}
-          </div>
+          <label htmlFor=''>Category</label>
+          <Select
+            name='category'
+            onChange={handleCategorySelect}
+            value={selectedOption}
+            options={options}
+          />
+        </div>
+        <div className='filter-control'>
+          <label htmlFor=''>Brand</label>
+          <Select
+            name='category'
+            onChange={handleBrandSelect}
+            value={selectedBrandOption}
+            options={brandOptions}
+          />
         </div>
         <div className='price filter-control'>
           <label htmlFor='price'>Price</label>

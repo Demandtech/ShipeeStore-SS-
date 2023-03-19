@@ -148,6 +148,10 @@ const Wrapper = styled.nav`
           width: 0;
           background: var(--white);
           transition: var(--transition);
+          -moz-transition: var(--transition);
+          -webkit-transition: var(--transition);
+          -o-transition: var(--transition);
+          -ms-transition: var(--transition);
           border-radius: 3px;
           margin: 0 auto;
         }
@@ -158,6 +162,10 @@ const Wrapper = styled.nav`
       .active {
         &::after {
           transition: var(--transition);
+          -moz-transition: var(--transition);
+          -webkit-transition: var(--transition);
+          -o-transition: var(--transition);
+          -ms-transition: var(--transition);
           width: 50%;
         }
       }
@@ -227,6 +235,10 @@ const Wrapper = styled.nav`
         padding-top: 2rem;
         z-index: 100;
         transition: var(--transition);
+        -moz-transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
+        -ms-transition: var(--transition);
 
         .mobile-login {
           display: flex;
@@ -241,9 +253,13 @@ const Wrapper = styled.nav`
       }
 
       .open {
+        transition: var(--transition);
+        -moz-transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
+        -ms-transition: var(--transition);
         opacity: 1;
         width: 15rem;
-        transition: var(--transition);
       }
 
       .nav-control {

@@ -20,11 +20,11 @@ const ProductsContext = createContext()
 
 const initialState = {
   products: [],
-  singleProduct: [],
+  singleProduct: {},
   isLoading: false,
   limit: 20,
   hasMore: true,
-  total:0
+  total:0,
 }
 
 const url = 'https://dummyjson.com/products'
@@ -32,7 +32,7 @@ const url = 'https://dummyjson.com/products'
 export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productsReducer, initialState)
  
-  const fetchData = async (url) => {
+  const fetchProduct = async (url) => {
     dispatch({ type: START_LOADING })
     try {
       const request = await fetch(url)
@@ -46,18 +46,35 @@ export const ProductsProvider = ({ children }) => {
     }
   }
 
+  const fetchSingleProduct = async (url)=> {
+    dispatch({type: START_LOADING})
+    try{
+     const res = await fetch(url)
+     const data = await res.json()
+     dispatch({type:GET_SINGLEPRODUCT, payload:data})
+     dispatch({type: STOP_LOADING})
+    }
+    catch(err){
+      console.log(err)
+      dispatch({ type: STOP_LOADING })
+    }
+    finally{
+      dispatch({ type: STOP_LOADING })
+    }
+  }
+
+  useEffect(() => {
+    fetchProduct(`${url}?limit=${state.limit}`)
+  }, [state.limit])
+
   const event = () => {
     if(state.limit === state.total){
        state.hasMore = false
     }
     if (state.hasMore && window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
-      dispatch({type:'LOAD_MORE_PRODUCTS'})
+      dispatch({type:GET_MORE_PRODUCTS})
     }
   }
-
-  useEffect(() => {
-    fetchData(`${url}?limit=${state.limit}`)
-  }, [state.limit])
 
   useEffect(() => {
     window.addEventListener('scroll', event)
@@ -65,7 +82,7 @@ export const ProductsProvider = ({ children }) => {
   })
 
   return (
-    <ProductsContext.Provider value={{ ...state }}>
+    <ProductsContext.Provider value={{ ...state, fetchSingleProduct }}>
       {children}
     </ProductsContext.Provider>
   )
