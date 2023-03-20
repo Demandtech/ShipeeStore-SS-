@@ -4,7 +4,6 @@ import Stars from './Stars'
 import { Link } from 'react-router-dom'
 import { formatPrice } from '../utils'
 import { useCartsContext } from '../contexts/cartsContext'
-import { useProductsContext } from '../contexts/productsContext'
 
 const Product = ({ title, price, rating, thumbnail, discountPercentage, id }) => {
   let tempTitle = title.split(' ').slice(0, 2).join(' ')
