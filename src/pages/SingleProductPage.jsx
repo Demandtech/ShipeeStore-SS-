@@ -25,11 +25,9 @@ const SingleProductPage = () => {
     stock,
     title,
     quantity,
-    discountPrice
+    discountPrice,
   } = singleProduct
-  
- 
-  
+
   useEffect(() => {
     fetchSingleProduct(`${url}/${id}`)
     // eslint-disable-next-line
@@ -80,7 +78,7 @@ const SingleProductPage = () => {
               </button>
             </div>
             <div className='add-btn'>
-              <button className='btn' onClick={()=>singlePageAddToCart()}>
+              <button className='btn' onClick={() => singlePageAddToCart()}>
                 <FaCartPlus className='icon' />
                 Add to cart
               </button>
@@ -249,6 +247,7 @@ const Wrapper = styled.main`
   }
 
   @media screen and (max-width: 835px) {
+    padding: 0 1.5rem;
     .main-wrapper {
       flex-direction: column;
       padding: 2rem 0;
@@ -256,6 +255,16 @@ const Wrapper = styled.main`
       .left-wrapper {
         width: 100%;
         margin-bottom: 2rem;
+        padding: 0;
+
+        .main-image {
+          height: 320px;
+        }
+        .images-wrapper {
+          .image-pag {
+            height: 3rem;
+          }
+        }
       }
 
       .right-wrapper {
