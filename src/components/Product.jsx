@@ -8,6 +8,8 @@ import { useCartsContext } from '../contexts/cartsContext'
 const Product = ({ title, price, rating, thumbnail, discountPercentage, id }) => {
   let tempTitle = title.split(' ').slice(0, 2).join(' ')
   const {addToCart} = useCartsContext()
+
+  let discountPrice = price - price * (discountPercentage / 100)
   
   return (
     <Wrapper>
@@ -25,7 +27,7 @@ const Product = ({ title, price, rating, thumbnail, discountPercentage, id }) =>
         <Link className='buy-btn' to={'/cart'}>
           Buy Now
         </Link>
-        <button onClick={()=> addToCart(id)} className='add-btn'>Add to Cart</button>
+        <button onClick={()=> addToCart(id, discountPrice)} className='add-btn'>Add to Cart</button>
       </div>
       <span className='discount'>Discount {discountPercentage}%</span>
     </Wrapper>

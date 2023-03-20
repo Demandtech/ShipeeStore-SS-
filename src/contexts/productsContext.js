@@ -13,7 +13,8 @@ import {
   GET_SINGLEPRODUCT,
   START_LOADING,
   STOP_LOADING,
-  GET_MORE_PRODUCTS
+  GET_MORE_PRODUCTS,
+  TOGGLE_QUANTITY,
 } from '../actions'
 
 const ProductsContext = createContext()
@@ -63,6 +64,10 @@ export const ProductsProvider = ({ children }) => {
     }
   }
 
+   const handlequantity = (command) => {
+     dispatch({ type: TOGGLE_QUANTITY, payload: command })
+   }
+
   useEffect(() => {
     fetchProduct(`${url}?limit=${state.limit}`)
   }, [state.limit])
@@ -82,7 +87,9 @@ export const ProductsProvider = ({ children }) => {
   })
 
   return (
-    <ProductsContext.Provider value={{ ...state, fetchSingleProduct }}>
+    <ProductsContext.Provider
+      value={{ ...state, fetchSingleProduct, handlequantity }}
+    >
       {children}
     </ProductsContext.Provider>
   )

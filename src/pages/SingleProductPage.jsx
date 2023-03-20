@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useProductsContext } from '../contexts/productsContext'
+import { useCartsContext } from '../contexts/cartsContext'
 import styled from 'styled-components'
 import { formatPrice } from '../utils'
 import { FaCartPlus, FaPlus, FaMinus } from 'react-icons/fa'
@@ -9,9 +10,10 @@ const url = 'https://dummyjson.com/products'
 
 const SingleProductPage = () => {
   const { id } = useParams()
-  const { fetchSingleProduct, singleProduct } = useProductsContext()
+  const { fetchSingleProduct, singleProduct, handlequantity } =
+    useProductsContext()
+  const { addToCart} = useCartsContext()
   const [imageIndex, setImageIndex] = useState(0)
-  const [stocks, setStock] = useState(1)
   const {
     brand,
     category,
@@ -22,22 +24,12 @@ const SingleProductPage = () => {
     rating,
     stock,
     title,
+    quantity
   } = singleProduct
 
-  const handleStocks = (command) => {
-    if (command === 'inc') {
-      if (stocks < stock) {
-        setStock((oldstock) => oldstock + 1)
-      }
-    }
-    if (command === 'dec') {
-      if (stocks > 1) {
-        setStock((oldstock) => oldstock - 1)
-      }
-    }
-  }
+ 
   let discountPrice = price - price * (discountPercentage / 100)
-
+  
   useEffect(() => {
     fetchSingleProduct(`${url}/${id}`)
     // eslint-disable-next-line
@@ -47,10 +39,10 @@ const SingleProductPage = () => {
       <div className='main-wrapper'>
         <div className='left-wrapper'>
           <div className='main-image'>
-            <img src={images[imageIndex]} alt={title} />
+            {images && <img src={images[imageIndex]} alt={title} />}
           </div>
           <div className='images-wrapper'>
-            {images.map((img, index) => {
+            {images?.map((img, index) => {
               return (
                 <div
                   onClick={() => setImageIndex(index)}
@@ -73,24 +65,25 @@ const SingleProductPage = () => {
             In stock: <span>{stock}</span>
           </p>
           <div className='prices'>
-            <span className='discountprice'>
-              {formatPrice(discountPrice)}
-            </span>{' '}
+            <span className='discountprice'>{formatPrice(discountPrice)}</span>{' '}
             <span className='discount-percentage'>{discountPercentage}%</span>
             <p className='price'>{formatPrice(price)}</p>
           </div>
           <div className='controls'>
             <div className='stocks-btns'>
-              <button className='btn' onClick={() => handleStocks('dec')}>
+              <button className='btn' onClick={() => handlequantity('DEC')}>
                 <FaMinus className='icon' />
               </button>
-              <span>{stocks}</span>
-              <button className='btn' onClick={() => handleStocks('inc')}>
+              <span>{quantity}</span>
+              <button className='btn' onClick={() => handlequantity('INC')}>
                 <FaPlus className='icon' />
               </button>
             </div>
             <div className='add-btn'>
-              <button className='btn'>
+              <button
+                className='btn'
+                onClick={() => addToCart(id,  discountPrice)}
+              >
                 <FaCartPlus className='icon' />
                 Add to cart
               </button>
@@ -261,6 +254,7 @@ const Wrapper = styled.main`
   @media screen and (max-width: 835px) {
     .main-wrapper {
       flex-direction: column;
+      padding: 2rem 0;
 
       .left-wrapper {
         width: 100%;

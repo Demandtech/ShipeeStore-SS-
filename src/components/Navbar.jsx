@@ -184,6 +184,7 @@ const Wrapper = styled.nav`
       .cart-btn {
         all: unset;
         position: relative;
+        cursor: pointer;
 
         .icon {
           font-size: 1.7rem;
