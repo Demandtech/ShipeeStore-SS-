@@ -13,15 +13,22 @@ const productsReducer = (state, action) => {
     case STOP_LOADING:
       return { ...state, isLoading: false }
     case GET_PRODUCTS:
+      action.payload.products.forEach(product => {
+       product.quantity = 1;
+        product.discountPrice =
+          product.price - product.price * (product.discountPercentage / 100)
+      })
+   
       return {
         ...state,
         total: action.payload.total,
         products: [...action.payload.products],
       }
     case GET_SINGLEPRODUCT:
+      let discountPrice = action.payload.price - action.payload.price * (action.payload.discountPercentage / 100)
       return {
         ...state,
-        singleProduct: { ...action.payload, quantity: 1 },
+        singleProduct: { ...action.payload, quantity: 1, discountPrice:discountPrice},
       }
     case GET_MORE_PRODUCTS:
       return {

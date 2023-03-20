@@ -12,7 +12,7 @@ const SingleProductPage = () => {
   const { id } = useParams()
   const { fetchSingleProduct, singleProduct, handlequantity } =
     useProductsContext()
-  const { addToCart} = useCartsContext()
+  const { singlePageAddToCart } = useCartsContext()
   const [imageIndex, setImageIndex] = useState(0)
   const {
     brand,
@@ -24,11 +24,11 @@ const SingleProductPage = () => {
     rating,
     stock,
     title,
-    quantity
+    quantity,
+    discountPrice
   } = singleProduct
-
+  
  
-  let discountPrice = price - price * (discountPercentage / 100)
   
   useEffect(() => {
     fetchSingleProduct(`${url}/${id}`)
@@ -80,10 +80,7 @@ const SingleProductPage = () => {
               </button>
             </div>
             <div className='add-btn'>
-              <button
-                className='btn'
-                onClick={() => addToCart(id,  discountPrice)}
-              >
+              <button className='btn' onClick={()=>singlePageAddToCart()}>
                 <FaCartPlus className='icon' />
                 Add to cart
               </button>

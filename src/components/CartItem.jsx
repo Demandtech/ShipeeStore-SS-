@@ -4,10 +4,11 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import { formatPrice } from '../utils'
 import { useCartsContext } from '../contexts/cartsContext'
 
-const CartItem = ({id,thumbnail, discountPrice, title }) => {
+const CartItem = ({id,thumbnail, discountPrice, title, quantity}) => {
   // let tempTitle = title.split(' ').slice(0, 2).join(' ')
   const { deleteCartItem } = useCartsContext()
-  let quantity = 1
+ 
+ 
   return (
     <Wrapper>
       <div className='cart_item_wrapper'>
