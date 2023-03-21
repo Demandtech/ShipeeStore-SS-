@@ -5,18 +5,17 @@ import Select from 'react-select'
 import {UPDATE_FILTERS} from '../actions'
 
 const Filters = () => {
+  const {filters: {
+    text,
+    category,
+    brand,
+    min_price,
+    max_price,
+    price
+  },
+  updateFilters
+} = useFiltersContext()
   
-  const options = [
-    { value: 'category', label: 'smartPhone'},
-    { value: 'category', label: 'Electronics' },
-    { value: 'category', label: 'Perfume' },
-  ]
-
-  const brandOptions = [
-    { value: 'brand', label: 'smartPhone' },
-    { value: 'brand', label: 'Electronics' },
-    { value: 'brand', label: 'Perfume' },
-  ]
 
   return (
     <Wrapper>
@@ -44,10 +43,10 @@ const Filters = () => {
             <input
               name='price'
               type='range'
-              min={}
-              max={}
-              value={}
-              onChange={}
+              min={min_price}
+              max={max_price}
+              value={price}
+              onChange={updateFilters}
             />
             <div className='max-price'>
               <span>{max_price}</span>

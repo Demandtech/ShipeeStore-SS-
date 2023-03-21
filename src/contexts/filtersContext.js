@@ -13,11 +13,11 @@ const initialState = {
   sort: 'price-lowest',
   filters: {
     text: '',
-    category: 'all',
-    brand: 'all',
-    min_price: 1,
-    max_price: 100,
-    price: 0
+    category: '',
+    brand: '',
+    min_price: null,
+    max_price: null,
+    price: null
   },
 }
 
