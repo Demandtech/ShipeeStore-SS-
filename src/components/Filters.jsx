@@ -5,26 +5,7 @@ import Select from 'react-select'
 import {UPDATE_FILTERS} from '../actions'
 
 const Filters = () => {
-  const {
-    updateFilters,
-    filters: { brand, category, text, min_price, max_price, price },
-    dispatch
-  } = useFiltersContext()
-  const [selectedOption, setSelectedOption] = useState(category)
-  const [selectedBrandOption, setSelectedBrandOption] = useState(brand)
-  const handleCategorySelect = (data) => {
-    setSelectedOption(data)
-    dispatch({type:UPDATE_FILTERS, payload:{ name:data.value, value:data.label }})
-  }
-
-  const handleBrandSelect = (data) => {
-    setSelectedBrandOption(data)
-    dispatch({
-      type: UPDATE_FILTERS,
-      payload: { name: data.value, value: data.label },
-    })
-  }
-
+  
   const options = [
     { value: 'category', label: 'smartPhone'},
     { value: 'category', label: 'Electronics' },
@@ -44,34 +25,29 @@ const Filters = () => {
         <div className='filter-control'>
           <label htmlFor=''>Category</label>
           <Select
-            name='category'
-            onChange={handleCategorySelect}
-            value={selectedOption}
-            options={options}
+           
+            
           />
         </div>
         <div className='filter-control'>
           <label htmlFor=''>Brand</label>
           <Select
-            name='category'
-            onChange={handleBrandSelect}
-            value={selectedBrandOption}
-            options={brandOptions}
+            
           />
         </div>
         <div className='price filter-control'>
           <label htmlFor='price'>Price</label>
           <div className='input-control'>
             <div className='min-price'>
-              <span>{min_price}</span>
+              <span></span>
             </div>
             <input
               name='price'
               type='range'
-              min={min_price}
-              max={max_price}
-              value={price}
-              onChange={updateFilters}
+              min={}
+              max={}
+              value={}
+              onChange={}
             />
             <div className='max-price'>
               <span>{max_price}</span>
