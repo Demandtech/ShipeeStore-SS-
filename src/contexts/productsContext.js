@@ -13,16 +13,15 @@ import {
   GET_SINGLEPRODUCT,
   START_LOADING,
   STOP_LOADING,
-  GET_MORE_PRODUCTS,
   TOGGLE_QUANTITY,
 } from '../actions'
 
 const ProductsContext = createContext()
 
-const initialState = {
+let initialState = {
   products: [],
   singleProduct: {},
-  isLoading: false,
+  isLoading: true,
   limit: 20,
   hasMore: true,
   total:0,
@@ -68,27 +67,15 @@ export const ProductsProvider = ({ children }) => {
      dispatch({ type: TOGGLE_QUANTITY, payload: command })
    }
 
-  useEffect(() => {
-    fetchProduct(`${url}?limit=${state.limit}`)
-  }, [state.limit])
-
-  const event = () => {
-    if(state.limit === state.total){
-       state.hasMore = false
-    }
-    if (state.hasMore && window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
-      dispatch({type:GET_MORE_PRODUCTS})
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', event)
-    return () => window.removeEventListener('scroll', event)
-  })
+ 
+ useEffect(() => {
+   fetchProduct(`${url}?limit=${state.limit}`)
+ }, [state.limit])
+ 
 
   return (
     <ProductsContext.Provider
-      value={{ ...state, fetchSingleProduct, handlequantity }}
+      value={{ ...state, fetchSingleProduct, handlequantity, dispatch }}
     >
       {children}
     </ProductsContext.Provider>

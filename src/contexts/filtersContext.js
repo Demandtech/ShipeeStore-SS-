@@ -1,7 +1,7 @@
-import React, { useContext, createContext, useReducer, useEffect } from 'react'
+import React, { useContext, createContext, useReducer, } from 'react'
 import filtersReducer from '../reducers/filtersReducer'
-import { FILTER_PRODUCTS, UPDATE_FILTERS, GET_PRODUCTS } from '../actions'
-import {useProductsContext} from '../contexts/productsContext'
+//import { FILTER_PRODUCTS, UPDATE_FILTERS, GET_PRODUCTS } from '../actions'
+//import {useProductsContext} from '../contexts/productsContext'
 
 
 
@@ -15,9 +15,9 @@ const initialState = {
     text: '',
     category: '',
     brand: '',
-    min_price: null,
-    max_price: null,
-    price: null
+    min_price: 0,
+    max_price: '',
+    price: ''
   },
 }
 
@@ -25,22 +25,13 @@ const FiltersContext = createContext()
 
 export const FiltersProvider = ({ children }) => {
   const [state, dispatch] = useReducer(filtersReducer, initialState)
-  const {products} = useProductsContext()
+  
 
   
-  const updateFilters = (event)=> {
-     let name = event.target.name  
-     let value = event.target.value
-     
-     dispatch({type:UPDATE_FILTERS, payload:{name:name, value:value}})
-  }
-
-  useEffect(()=>{
-    dispatch({type:GET_PRODUCTS, payload:products})
-  }, [products])
+  
 
   return (
-    <FiltersContext.Provider value={{ ...state, updateFilters, dispatch }}>
+    <FiltersContext.Provider value={{ ...state}}>
       {children}
     </FiltersContext.Provider>
   )

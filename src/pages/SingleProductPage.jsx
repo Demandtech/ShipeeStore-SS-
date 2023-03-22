@@ -5,23 +5,22 @@ import { useCartsContext } from '../contexts/cartsContext'
 import styled from 'styled-components'
 import { formatPrice } from '../utils'
 import { FaCartPlus, FaPlus, FaMinus } from 'react-icons/fa'
+import Loading from '../components/Loading'
 
 const url = 'https://dummyjson.com/products'
 
 const SingleProductPage = () => {
   const { id } = useParams()
-  const { fetchSingleProduct, singleProduct, handlequantity } =
+  const { fetchSingleProduct, singleProduct, handlequantity, isLoading } =
     useProductsContext()
   const { singlePageAddToCart } = useCartsContext()
   const [imageIndex, setImageIndex] = useState(0)
   const {
     brand,
-    category,
     description,
     discountPercentage,
     images,
     price,
-    rating,
     stock,
     title,
     quantity,
@@ -32,6 +31,10 @@ const SingleProductPage = () => {
     fetchSingleProduct(`${url}/${id}`)
     // eslint-disable-next-line
   }, [id])
+
+  if(isLoading) {
+    return <Loading />
+  }
   return (
     <Wrapper>
       <div className='main-wrapper'>
