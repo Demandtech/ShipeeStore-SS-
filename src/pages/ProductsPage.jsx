@@ -64,7 +64,7 @@ h2{
  }
 
  @media screen and (max-width:835px){
-  .products-wrapper{
+  .products-wrapper-grid{
     padding: 3rem 1rem;
   }
  }

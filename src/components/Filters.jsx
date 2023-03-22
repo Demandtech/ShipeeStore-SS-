@@ -68,6 +68,7 @@ const Wrapper = styled.section`
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    padding: 1rem;
 
     .select-control {
       width: 100%;

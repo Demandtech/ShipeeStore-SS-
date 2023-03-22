@@ -15,7 +15,10 @@ const Select = ({ type, options }) => {
         </button>
         <ul className={`${openSelect ? 'open' : 'close'}`}>
           {options.map((option, index) => (
-            <li className={`${option === value ? 'active' : ''}`} onClick={()=> setValue(option)} key={index}>{option}</li>
+            <li className={`${option === value ? 'active' : ''}`} onClick={()=> {
+              setValue(option)
+              setOpenSelect(false)
+            }} key={index}>{option}</li>
           ))}
         </ul>
       </div>
