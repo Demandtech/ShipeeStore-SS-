@@ -65,6 +65,17 @@ const Wrapper = styled.section`
     border: 1.5px solid lightgray;
     border-radius: 0.2rem;
   }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    .select-control {
+      width: 100%;
+      .select {
+        width: 100%;
+      }
+    }
+  }
 `
 
 export default Filters
