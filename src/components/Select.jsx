@@ -1,79 +1,74 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { useFiltersContext } from '../contexts/filtersContext'
+import { BsChevronDown } from 'react-icons/bs'
 
-const Select = ({ placeholder, values, name }) => {
-  const [openList, setOpenList] = useState(false)
-  const [value, setValue] = useState(values)
-  const {updateFilters} = useFiltersContext()
-  const options = [
-    { value: 'phone', label: 'phone' },
-    { value: 'laptop', label: 'laptop' },
-    { value: 'perfume', label: 'perfume' },
-  ]
+const Select = ({ type, options }) => {
+  const [openSelect, setOpenSelect] = useState(false)
+  const [value, setValue] = useState(type)
 
   return (
     <Wrapper>
-      <div className='select-control'>
-        <input
-          onClick={() => {
-            setOpenList(!openList)
-          }}
-          name={name}
-          value={value}
-          type='text'
-          placeholder={placeholder}
-          onChange={updateFilters}
-        />
-        {openList && (
-          <ul className='select-list'>
-            {options.map((option, index) => {
-              return (
-                <li key={index} onClick={(e) => setValue(e.target.textContent)}>
-                  {option.value}
-                </li>
-              )
-            })}
-          </ul>
-        )}
+      <div className='select'>
+        <button onClick={() => setOpenSelect(!openSelect)}>
+          <span>{value}</span>
+          <BsChevronDown />
+        </button>
+        <ul className={`${openSelect ? 'open' : 'close'}`}>
+          {options.map((option, index) => (
+            <li className={`${option === value ? 'active' : ''}`} onClick={()=> setValue(option)} key={index}>{option}</li>
+          ))}
+        </ul>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  .select-control {
-    width: 100%;
-    height: 40px;
+  .select {
+    width: 200px;
+    min-height: 40px;
     position: relative;
+    padding: 0 0.4rem;
 
-    input {
-      height: 100%;
+    button {
+      all: unset;
       width: 100%;
-      border: 1px solid lightgray;
-      border-radius: 0.2rem;
-      padding: 0 1rem;
-      font-size: 1rem;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .close {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .open {
+    height: 10rem;
+    position: absolute;
+    list-style-type: none;
+    background: white;
+    z-index: 100;
+    border: 1.5px solid lightgray;
+    overflow: auto;
+    left: 0;
+    right: 0;
+    transition: var(--transition);
+
+    li {
+      background: white;
+      padding: 0.5rem 0.4rem;
+      cursor: pointer;
       transition: var(--transition);
 
-      &:focus {
-        outline: none;
-        transform: translateY(-2px);
+      &:hover {
+        background: aliceblue;
       }
     }
 
-    .select-list {
-      list-style-type: none;
-      position: absolute;
-      border: 1px solid lightgray;
-      border-radius: 0.2rem;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      li {
-        background: var(--white);
-        padding: 0.5rem 1rem;
-      }
+    .active {
+      background: var(--hoverBlue);
     }
   }
 `

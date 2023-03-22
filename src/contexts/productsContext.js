@@ -3,7 +3,6 @@ import {
   createContext,
   useReducer,
   useEffect,
-  useState,
 } from 'react'
 import productsReducer from '../reducers/productsReducer'
 
@@ -21,7 +20,7 @@ const ProductsContext = createContext()
 let initialState = {
   products: [],
   singleProduct: {},
-  isLoading: true,
+  isLoading: false,
   limit: 20,
   hasMore: true,
   total:0,
@@ -38,6 +37,7 @@ export const ProductsProvider = ({ children }) => {
       const request = await fetch(url)
       const data = await request.json()
       dispatch({type: GET_PRODUCTS, payload:{products:data.products, total:data.total}})
+      if(data.total > state.limit)
       dispatch({ type: STOP_LOADING })
     } catch (err) {
       dispatch({ type: STOP_LOADING })
@@ -53,6 +53,7 @@ export const ProductsProvider = ({ children }) => {
      const data = await res.json()
      dispatch({type:GET_SINGLEPRODUCT, payload:data})
      dispatch({type: STOP_LOADING})
+     
     }
     catch(err){
       console.log(err)
@@ -69,8 +70,9 @@ export const ProductsProvider = ({ children }) => {
 
  
  useEffect(() => {
-   fetchProduct(`${url}?limit=${state.limit}`)
- }, [state.limit])
+   fetchProduct(`${url}?limit=100`)
+   // eslint-disable-next-line
+ }, [])
  
 
   return (

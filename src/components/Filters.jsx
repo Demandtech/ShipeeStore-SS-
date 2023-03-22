@@ -1,76 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useFiltersContext } from '../contexts/filtersContext'
-//import Select from 'react-select'
-//import {UPDATE_FILTERS} from '../actions'
-import {formatPrice} from '../utils'
+import Select from '../components/Select'
+import { formatPrice } from '../utils'
+import { BsFillGridFill, BsList} from 'react-icons/bs'
 
 const Filters = () => {
-  const {filters: {
-    text,
-    min_price,
-    max_price,
-    price
-  },
-  updateFilters
-} = useFiltersContext()
-
-
+  const {
+    filters: { brand, category },
+  } = useFiltersContext()
   
-//const options = [{label: 'iphone', value: 'ios'}]
-  
+
   return (
     <Wrapper>
-      <h2>Products</h2>
-      <div className='filters-wrapper'>
-        <div className='filter-control'>
-          <label htmlFor=''>Category</label>
-          <select name="category" id="">
-              <option value="iphone">Iphone</option>
-          </select>
-        </div>
-        <div className='filter-control'>
-          <label htmlFor=''>Brand</label>
-         
-        </div>
-        <div className='price filter-control'>
-          <label htmlFor='price'>Price</label>
-          <div className='input-control'>
-            <input
-              name='price'
-              type='range'
-              min={min_price}
-              max={max_price}
-              value={price}
-              onChange={updateFilters}
-            />
-            <div className='max-price'>
-              <span>{formatPrice(price)}</span>
-            </div>
-          </div>
-        </div>
-        <div className='search filter-control'>
-          <label htmlFor='name'>Product</label>
-          <div className='input-control'>
-            <input
-              type='text'
-              name='text'
-              placeholder='Search products...'
-              className='text-input'
-              value={text}
-              onChange={updateFilters}
-            />
-          </div>
-        </div>
+      <div className='view-btns'>
+        <button className='btn'>
+          <BsFillGridFill />
+        </button>
+        <button className='btn'>
+          <BsList />
+        </button>
+      </div>
+      <form className='search'>
+        <input type='search' />
+      </form>
+      <div className='select-control category'>
+         <Select type={'Category'} options={category}/>
+      </div>
+      <div className="select-control brand">
+         <Select type={'Brand'} options={brand}/>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  position: fixex;
-  width: 250px;
-  
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem 1rem 3rem;
+  gap: 1rem;
+
+  .view-btns {
+    display: flex;
+    gap: 0.5rem;
+
+    .btn {
+      padding: 0;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .search {
+    width: 100%;
+    input {
+      width: 100%;
+      height: 40px;
+      border: 1.5px solid lightgray;
+      border-radius: 0.2rem;
+    }
+  }
+
+  .select-control {
+    border: 1.5px solid lightgray;
+    border-radius: 0.2rem;
+  }
 `
 
 export default Filters

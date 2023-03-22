@@ -98,6 +98,7 @@ const Wrapper = styled.main`
             top:50%;
             left: .5rem;
             transform: translateY(-50%);
+            z-indez: 100;
            }
         }
 
