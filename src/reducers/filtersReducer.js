@@ -32,7 +32,7 @@ const filterReducer = (state, action) => {
       ) {
         tempBrand = state.all_products.map((product) => product.brand)
       } else {
-        tempBrand = action.payload
+        tempBrand = state.all_products
           .filter((product) => {
             return product.category === state.filters.category_query
           })
