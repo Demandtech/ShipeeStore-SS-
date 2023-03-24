@@ -2,15 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { BsChevronDown } from 'react-icons/bs'
 
-const Select = ({ type, options }) => {
+const Select = ({setValue, value, options }) => {
   const [openSelect, setOpenSelect] = useState(false)
-  const [value, setValue] = useState(type)
-
+  
   return (
     <Wrapper>
       <div className='select'>
         <button onClick={() => setOpenSelect(!openSelect)}>
-          <span>{value}</span>
+          {value}
           <BsChevronDown />
         </button>
         <ul className={`${openSelect ? 'open' : 'close'}`}>

@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useFiltersContext } from '../contexts/filtersContext'
 import Select from '../components/Select'
 import { formatPrice } from '../utils'
-import { BsFillGridFill, BsList} from 'react-icons/bs'
+import { BsFillGridFill, BsList } from 'react-icons/bs'
 
 const Filters = () => {
-  const {
-    filters: { brand, category },
-  } = useFiltersContext()
+  const [catValue, setCatValue] = useState("Category")
+  const [braValue, setBraValue] = useState("Brand")
+  const { brand, category,handleSelect, handleSearch, filters:{brand_query, search_query, category_query} } = useFiltersContext()
   
-
+ 
+ useEffect(()=> {
+  handleSelect(catValue, braValue)
+ }, [catValue, braValue])
+  
   return (
     <Wrapper>
       <div className='view-btns'>
@@ -22,13 +26,13 @@ const Filters = () => {
         </button>
       </div>
       <form className='search'>
-        <input type='text'  placeholder='Search products...'/>
+        <input value={search_query} onChange={handleSearch} type='text' placeholder='Search products...' />
       </form>
       <div className='select-control category'>
-         <Select type={'Category'} options={category}/>
+        <Select value={catValue} setValue={setCatValue} options={category} />
       </div>
-      <div className="select-control brand">
-         <Select type={'Brand'} options={brand}/>
+      <div className='select-control brand'>
+        <Select value={braValue} setValue={setBraValue}  options={brand} />
       </div>
     </Wrapper>
   )
@@ -71,9 +75,9 @@ const Wrapper = styled.section`
     flex-direction: column;
     padding: 1rem;
 
-   .select-control{
-    width: 100%;
-   } 
+    .select-control {
+      width: 100%;
+    }
   }
 `
 
