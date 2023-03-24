@@ -28,7 +28,8 @@ const Select = ({ type, options }) => {
 
 const Wrapper = styled.div`
   .select {
-    width: 200px;
+    width: 280px;
+    min-width: 300px;
     min-height: 40px;
     position: relative;
     padding: 0 0.4rem;
@@ -72,6 +73,17 @@ const Wrapper = styled.div`
 
     .active {
       background: var(--hoverBlue);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    .select {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
     }
   }
 `

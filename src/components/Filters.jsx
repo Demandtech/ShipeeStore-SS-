@@ -22,7 +22,7 @@ const Filters = () => {
         </button>
       </div>
       <form className='search'>
-        <input type='search' />
+        <input type='text'  placeholder='Search products...'/>
       </form>
       <div className='select-control category'>
          <Select type={'Category'} options={category}/>
@@ -58,6 +58,7 @@ const Wrapper = styled.section`
       height: 40px;
       border: 1.5px solid lightgray;
       border-radius: 0.2rem;
+      padding: 0 0.5rem;
     }
   }
 
@@ -70,12 +71,9 @@ const Wrapper = styled.section`
     flex-direction: column;
     padding: 1rem;
 
-    .select-control {
-      width: 100%;
-      .select {
-        width: 100%;
-      }
-    }
+   .select-control{
+    width: 100%;
+   } 
   }
 `
 
