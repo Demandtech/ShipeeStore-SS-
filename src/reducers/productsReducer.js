@@ -60,7 +60,7 @@ const productsReducer = (state, action) => {
       }
       return {...state}
     default:
-      return { ...state }
+      throw new Error(`Unhandled action type: ${action.type}`)
   }
 }
 

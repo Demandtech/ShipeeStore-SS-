@@ -22,7 +22,7 @@ const Stars = ({ rating }) => {
 
 const Wrapper = styled.span`
   .icon {
-    color: var(--navyBlue);
+    color: #ffd700;
   }
 `
 

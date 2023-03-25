@@ -15,6 +15,7 @@
   --blueWhiteGradient: linear-gradient(to right, var(--white), var(--navyBlue));
   --transition: all 0.3s linear;
   --hoverBlue: #000080a2;
+  --notification: #4caf50;
 }
 
 body {

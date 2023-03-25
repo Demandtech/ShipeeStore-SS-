@@ -3,6 +3,7 @@ import {
   GET_PRODUCTS,
   DELETE_CART_ITEM,
   SINGLE_ADD_TO_CART,
+  CART_NOTIFICATION,
 } from '../actions'
 
 const cartsReducer = (state, action) => {
@@ -22,7 +23,7 @@ const cartsReducer = (state, action) => {
           (item) => item.id === itemToAddId
         )
         console.log(cartItem)
-        return { ...state, cart: [...state.cart, cartItem] }
+        return { ...state, cart: [...state.cart, cartItem], cart_notification:{show:true, msg:'New item add to cart'} }
       } else {
         return { ...state }
       }
@@ -45,7 +46,10 @@ const cartsReducer = (state, action) => {
       return {
         ...state,
         cart: state.cart.filter((ca) => ca.id !== action.payload),
+        cart_notification: { show: true, msg: 'Item removed from cart' }
       }
+    case CART_NOTIFICATION:
+      return {...state, cart_notification:{show:false, msg:''}}
     default:
       throw new Error(`Unhandled action type: ${action.type}`)
   }

@@ -41,13 +41,13 @@ const Wrapper = styled.article`
 
   .discount {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
     color: var(--white);
-    background: red;
-    border-radius: 1rem;
+    background: var(--notification);
+
     padding: 0 0.5rem;
-    box-shadow: 2px 2px 5px lightgrey;
+    box-shadow: 2px 2px 4px #dcdcdc;
   }
 
   img {
@@ -59,15 +59,15 @@ const Wrapper = styled.article`
   .name {
     display: flex;
     justify-content: space-between;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
 
-    a{
+    a {
       text-decoration: none;
       color: var(--navyBlue);
       transition: var(--transition);
       font-weight: 600;
 
-      &:hover{
+      &:hover {
         color: var(--hoverBlue);
       }
     }
@@ -85,6 +85,19 @@ const Wrapper = styled.article`
       padding: 0.2rem 0.5rem;
       border-radius: 0.3rem;
       cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid var(--navyBlue);
+
+      &:hover {
+        background: transparent;
+        color: var(--navyBlue);
+        border: 2px solid var(--navyBlue);
+      }
+
+      &:active {
+        transform: translateY(5px);
+        // background: red;
+      }
     }
 
     .buy-btn {
@@ -93,6 +106,18 @@ const Wrapper = styled.article`
       padding: 0.2rem 0.5rem;
       border-radius: 0.3rem;
       color: var(--navyBlue);
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--white);
+        background: var(--navyBlue);
+        border: 2px solid var(--navyBlue);
+      }
+
+      &:active {
+        transform: translateY(5px);
+        // background: red;
+      }
     }
   }
 `

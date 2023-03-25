@@ -43,6 +43,7 @@ const ProductsHeader = () => {
 
   return (
     <Wrapper>
+     
       {slides.map((slide, slideIndex) => {
         const { img, name, price } = slide
         return (
@@ -65,7 +66,10 @@ const ProductsHeader = () => {
       })}
       <div className='pagination-wrapper'>
         {slides.map((_, i) => (
-          <span key={i} className={`pag ${index === i ? 'active-pag' : ''}`}></span>
+          <span
+            key={i}
+            className={`pag ${index === i ? 'active-pag' : ''}`}
+          ></span>
         ))}
       </div>
     </Wrapper>

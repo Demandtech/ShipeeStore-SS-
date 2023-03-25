@@ -6,5 +6,16 @@ import Select from './Select'
 import Product from './Product'
 import Stars from './Stars'
 import CartItem from './CartItem'
+import CartNotification from './CartNotification'
 
-export { Navbar, ProductsHeader, Cart, Filters, Select, Product, Stars, CartItem  }
+export {
+  Navbar,
+  ProductsHeader,
+  Cart,
+  Filters,
+  Select,
+  Product,
+  Stars,
+  CartItem,
+  CartNotification,
+}

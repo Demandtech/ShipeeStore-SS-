@@ -6,58 +6,96 @@ import { formatPrice } from '../utils'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
 
 const Filters = () => {
-  const [catValue, setCatValue] = useState("Category")
-  const [braValue, setBraValue] = useState("Brand")
-  const { brand, category,handleSelect, handleSearch, handleFilter, filters:{search_query} } = useFiltersContext()
-  
- 
- useEffect(()=> {
-  handleSelect(catValue, braValue)
- }, [catValue, braValue])
-  
+  const [catValue, setCatValue] = useState('Category')
+  const [braValue, setBraValue] = useState('Brand')
+  const {
+    grid_view,
+    brand,
+    category,
+    handleSelect,
+    handleSearch,
+    handleFilter,
+    filters: { search_query },
+  } = useFiltersContext()
+
+  useEffect(() => {
+    handleSelect(catValue, braValue)
+  }, [catValue, braValue])
+
   return (
     <Wrapper>
-      <div className='view-btns'>
-        <button className='btn'>
-          <BsFillGridFill />
-        </button>
-        <button className='btn'>
-          <BsList />
-        </button>
+      <div className='left-wrapper'>
+        <div className='view-btns'>
+          <button className={`btn ${grid_view ? 'active-view' : ''}`}>
+            <BsFillGridFill />
+          </button>
+          <button className={`btn ${!grid_view ? 'active-view' : ''}`}>
+            <BsList />
+          </button>
+        </div>
+        <div className='sort'>
+          <select name='sort' id=''>
+            <option value='Sort Products'>Sort Products</option>
+            <option value='price'>Price</option>
+            <option value='a-z'>A - Z</option>
+            <option value='z-a'>Z - A</option>
+          </select>
+        </div>
       </div>
       <form className='search'>
-        <input value={search_query} onChange={handleSearch} type='text' placeholder='Search products...' />
+        <input
+          value={search_query}
+          onChange={handleSearch}
+          type='text'
+          placeholder='Search products...'
+        />
       </form>
       <div className='select-control category'>
         <Select value={catValue} setValue={setCatValue} options={category} />
       </div>
       <div className='select-control brand'>
-        <Select value={braValue} setValue={setBraValue}  options={brand} />
+        <Select value={braValue} setValue={setBraValue} options={brand} />
       </div>
-      <button onClick={handleFilter} className='submit-btn'>Search</button>
+      <button onClick={handleFilter} className='submit-btn'>
+        Search
+      </button>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-display: flex;
-align-items: center;
-padding: 2rem 3rem;
-gap: 1rem;
-border-bottom: 1px solid lightgray;
-
-.view-btns {
   display: flex;
-  gap: 0.5rem;
-  
-  .btn {
-    padding: 0;
-    display: grid;
-    place-items: center;
-  }
-}
+  align-items: center;
+  padding: 2rem 3rem;
+  gap: 1rem;
+  border-bottom: 1px solid lightgray;
 
-.search {
+  .left-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    select{
+      height: 40px;
+      bordeR: 1.5px solid lightgray;
+      border-radius: <div className="2"></div>rem;
+    }
+    .view-btns {
+      display: flex;
+      gap: 0.5rem;
+
+      .btn {
+        padding: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .active-view {
+        color: var(--navyBlue);
+      }
+    }
+  }
+
+  .search {
     width: 100%;
     display: flex;
     input {
@@ -92,17 +130,14 @@ border-bottom: 1px solid lightgray;
       color: var(--white);
       transition: var(--transition);
     }
-  
   }
   @media screen and (max-width: 600px) {
-    
-      flex-direction: column;
-      padding: 2rem 1rem;
+    flex-direction: column;
+    padding: 2rem 1rem;
 
-      .select-control {
-        width: 100%;
-      }
-    
+    .select-control {
+      width: 100%;
+    }
   }
 `
 

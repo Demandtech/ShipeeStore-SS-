@@ -7,7 +7,6 @@ import { CartItem } from '../components'
 const Cart = () => {
   const { cart } = useCartsContext()
 
-  console.log(cart)
 
   if (cart.length < 1) {
     return (

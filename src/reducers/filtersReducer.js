@@ -103,7 +103,7 @@ const filterReducer = (state, action) => {
         itemError: filterError,
       }
     default:
-      return { ...state }
+      throw new Error(`Unhandled action type: ${action.type}`)
   }
 }
 

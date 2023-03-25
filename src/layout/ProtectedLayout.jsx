@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-import { Navbar } from '../components'
-import { useUserContext } from '../contexts/userContext'
+import { Navbar, CartNotification } from '../components'
+import { useUserContext} from '../contexts/userContext'
 
 const ProtectedLayout = () => {
  const { isAuthenticated } = useUserContext()
@@ -11,6 +11,7 @@ const ProtectedLayout = () => {
  }
    return (
      <div>
+       <CartNotification />
        <Navbar />
        <Outlet />
      </div>
