@@ -26,9 +26,8 @@ const Select = ({setValue, value, options }) => {
 }
 
 const Wrapper = styled.div`
-  .select {
-    width: 280px;
-    min-width: 300px;
+  .select {   
+    width: 300px;
     min-height: 40px;
     position: relative;
     padding: 0 0.4rem;

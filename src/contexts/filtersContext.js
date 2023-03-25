@@ -1,6 +1,12 @@
 import React, { useContext, createContext, useReducer, useEffect} from 'react'
 import filtersReducer from '../reducers/filtersReducer'
-import { GET_PRODUCTS } from '../actions'
+import {
+  FILTER_PRODUCTS,
+  GET_PRODUCTS,
+  GET_SEARCH_QUERY,
+  GET_SELECT_QUERY,
+  LOAD_BRANDS,
+} from '../actions'
 import {useProductsContext} from '../contexts/productsContext'
 
 
@@ -11,6 +17,7 @@ const initialState = {
   sort: 'price-lowest',
   category: [],
   brand: [],
+  itemError: {show:false, msg:''},
   filters: {
     search_query: '',
     category_query: 'All',
@@ -26,11 +33,15 @@ export const FiltersProvider = ({ children }) => {
 
    const handleSearch = (e) => {
      const value = e.target.value
-     dispatch({ type: 'GET_SEARCH_QUERY', payload: value})
+     dispatch({ type: GET_SEARCH_QUERY, payload: value })
    }
 
    const handleSelect = (cat, bra)=> {
-    dispatch({ type: 'GET_SELECT_QUERY', payload:{cat, bra}})
+    dispatch({ type: GET_SELECT_QUERY, payload: { cat, bra } })
+   }
+
+   const handleFilter = ()=> {
+    dispatch({type: FILTER_PRODUCTS})
    }
   
   useEffect(()=>{
@@ -38,11 +49,11 @@ export const FiltersProvider = ({ children }) => {
   }, [products])
 
   useEffect(()=> {
-    dispatch({type:'LOAD_BRANDS'})
+    dispatch({ type: LOAD_BRANDS })
   },[state.filters.category_query])
 
   return (
-    <FiltersContext.Provider value={{ ...state, handleSearch, handleSelect}}>
+    <FiltersContext.Provider value={{ ...state, handleSearch, handleSelect, handleFilter}}>
       {children}
     </FiltersContext.Provider>
   )

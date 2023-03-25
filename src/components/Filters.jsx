@@ -8,7 +8,7 @@ import { BsFillGridFill, BsList } from 'react-icons/bs'
 const Filters = () => {
   const [catValue, setCatValue] = useState("Category")
   const [braValue, setBraValue] = useState("Brand")
-  const { brand, category,handleSelect, handleSearch, filters:{brand_query, search_query, category_query} } = useFiltersContext()
+  const { brand, category,handleSelect, handleSearch, handleFilter, filters:{search_query} } = useFiltersContext()
   
  
  useEffect(()=> {
@@ -34,29 +34,32 @@ const Filters = () => {
       <div className='select-control brand'>
         <Select value={braValue} setValue={setBraValue}  options={brand} />
       </div>
+      <button onClick={handleFilter} className='submit-btn'>Search</button>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
+display: flex;
+align-items: center;
+padding: 2rem 3rem;
+gap: 1rem;
+border-bottom: 1px solid lightgray;
+
+.view-btns {
   display: flex;
-  align-items: center;
-  padding: 1rem 3rem 1rem 3rem;
-  gap: 1rem;
-
-  .view-btns {
-    display: flex;
-    gap: 0.5rem;
-
-    .btn {
-      padding: 0;
-      display: grid;
-      place-items: center;
-    }
+  gap: 0.5rem;
+  
+  .btn {
+    padding: 0;
+    display: grid;
+    place-items: center;
   }
+}
 
-  .search {
+.search {
     width: 100%;
+    display: flex;
     input {
       width: 100%;
       height: 40px;
@@ -71,13 +74,35 @@ const Wrapper = styled.section`
     border-radius: 0.2rem;
   }
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-    padding: 1rem;
+  .submit-btn {
+    all: unset;
+    border: 1.5px solid var(--navyBlue);
+    width: 100%;
+    text-align: center;
+    padding: 0.4rem 0;
+    color: var(--navyBlue);
+    border-radius: 0.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
 
-    .select-control {
-      width: 100%;
+    &:hover {
+      background: var(--navyBlue);
+      color: var(--white);
+      transition: var(--transition);
     }
+  
+  }
+  @media screen and (max-width: 600px) {
+    
+      flex-direction: column;
+      padding: 2rem 1rem;
+
+      .select-control {
+        width: 100%;
+      }
+    
   }
 `
 

@@ -65,6 +65,7 @@ const Wrapper = styled.article`
       text-decoration: none;
       color: var(--navyBlue);
       transition: var(--transition);
+      font-weight: 600;
 
       &:hover{
         color: var(--hoverBlue);

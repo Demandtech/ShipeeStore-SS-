@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useProductsContext } from '../contexts/productsContext'
 import { useCartsContext } from '../contexts/cartsContext'
 import styled from 'styled-components'
@@ -32,7 +32,7 @@ const SingleProductPage = () => {
     // eslint-disable-next-line
   }, [id])
 
-  if(isLoading) {
+  if (isLoading) {
     return <Loading />
   }
   return (
@@ -86,6 +86,9 @@ const SingleProductPage = () => {
                 Add to cart
               </button>
             </div>
+          </div>
+          <div className='btn-link'>
+            <Link to={'/'}>Continu Shopping</Link>
           </div>
         </div>
       </div>
@@ -244,6 +247,18 @@ const Wrapper = styled.main`
             align-items: center;
             gap: 0.5rem;
           }
+        }
+      }
+
+      .btn-link {
+        margin-top: auto;
+        text-align: right;
+        a {
+          border: 1.5px solid var(--navyBlue);
+          text-decoration: none;
+          color: var(--navyBlue);
+          padding: 0.4rem 2rem;
+          border-radius: 0.4rem;
         }
       }
     }
