@@ -6,6 +6,7 @@ import {
   GET_SEARCH_QUERY,
   GET_SELECT_QUERY,
   LOAD_BRANDS,
+  UPDATE_SORT,
 } from '../actions'
 import {useProductsContext} from '../contexts/productsContext'
 
@@ -18,6 +19,7 @@ const initialState = {
   category: [],
   brand: [],
   itemError: {show:false, msg:''},
+  sort: 'price_lowest',
   filters: {
     search_query: '',
     category_query: 'All',
@@ -43,6 +45,11 @@ export const FiltersProvider = ({ children }) => {
    const handleFilter = ()=> {
     dispatch({type: FILTER_PRODUCTS})
    }
+
+   const updateSort = (e)=> {
+   const value = e.target.value
+    dispatch({type: UPDATE_SORT})
+   }
   
   useEffect(()=>{
    dispatch({type:GET_PRODUCTS, payload:products})
@@ -53,7 +60,7 @@ export const FiltersProvider = ({ children }) => {
   },[state.filters.category_query])
 
   return (
-    <FiltersContext.Provider value={{ ...state, handleSearch, handleSelect, handleFilter}}>
+    <FiltersContext.Provider value={{ ...state, handleSearch, handleSelect, handleFilter, updateSort}}>
       {children}
     </FiltersContext.Provider>
   )

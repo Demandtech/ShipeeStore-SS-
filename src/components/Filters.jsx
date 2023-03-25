@@ -15,6 +15,8 @@ const Filters = () => {
     handleSelect,
     handleSearch,
     handleFilter,
+    sort,
+    updateSort,
     filters: { search_query },
   } = useFiltersContext()
 
@@ -34,11 +36,11 @@ const Filters = () => {
           </button>
         </div>
         <div className='sort'>
-          <select name='sort' id=''>
-            <option value='Sort Products'>Sort Products</option>
-            <option value='price'>Price</option>
-            <option value='a-z'>A - Z</option>
-            <option value='z-a'>Z - A</option>
+          <select value={sort} onChange={updateSort} name='sort' id='sort'>
+            <option value='price-lowest'>price(lowest)</option>
+            <option value='price-highest'>Price(hightes)</option>
+            <option value='name-1'>A - Z</option>
+            <option value='name-z'>Z - A</option>
           </select>
         </div>
       </div>
