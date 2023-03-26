@@ -9,10 +9,10 @@ import { useFiltersContext } from '../contexts/filtersContext'
 
 
 const ProductsPage = () => {
-  const { products, isLoading, dispatch, limit, total, hasMore } =
+  const {isLoading, dispatch, limit, total, hasMore } =
     useProductsContext()
   const { filtered_products, itemError } = useFiltersContext()
-  //console.log(products)
+  console.log(filtered_products)
   useEffect(() => {
     window.addEventListener('scroll', event)
     return () => window.removeEventListener('scroll', event)

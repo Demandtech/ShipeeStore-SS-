@@ -4,9 +4,9 @@ import { useProductsContext } from '../contexts/productsContext'
 import { useCartsContext } from '../contexts/cartsContext'
 import styled from 'styled-components'
 import { formatPrice } from '../utils'
-import { FaPlus, FaMinus } from 'react-icons/fa'
 import Loading from '../components/Loading'
-import { Button } from '../components'
+import { Button, QuantityControl } from '../components'
+
 
 const url = 'https://dummyjson.com/products'
 
@@ -24,8 +24,8 @@ const SingleProductPage = () => {
     price,
     stock,
     title,
-    quantity,
     discountPrice,
+    quantity
   } = singleProduct
 
   useEffect(() => {
@@ -72,19 +72,7 @@ const SingleProductPage = () => {
             <p className='price'>{formatPrice(price)}</p>
           </div>
           <div className='controls'>
-            <div className='stocks-btns'>
-              <Button
-                onClick={handlequantity}
-                argument='DEC'
-                label={<FaMinus className='icon' />}
-              />
-              <span>{quantity}</span>
-              <Button
-                onClick={handlequantity}
-                argument='INC'
-                label={<FaPlus className='icon' />}
-              />
-            </div>
+            <QuantityControl quantity={quantity}/>
             <div className='add-btn'>
               <Button label={'Add to cart'} onClick={singlePageAddToCart} />
             </div>
@@ -211,30 +199,7 @@ const Wrapper = styled.main`
         display: flex;
         gap: 1rem;
 
-        .stocks-btns {
-          display: flex;
-          align-items: center;
-          gap: 1.2rem;
-          background: aliceblue;
-          padding: 0 1rem;
-          border-radius: 0.4rem;
-
-          .btn {
-            padding: 0;
-            display: grid;
-            place-items: center;
-
-            .icon {
-              color: var(--navyBlue);
-            }
-
-            &:hover {
-              .icon {
-                color: var(--hoverBlue);
-              }
-            }
-          }
-        }
+       
         .add-btn {
           background: var(--navyBlue);
           color: var(--white);

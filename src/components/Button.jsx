@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 const Button = (props) => {
-  console.log(props)
   return (
     <Wrapper type={props.type} onClick={() => props.onClick(props.argument)}>
       {props.label}

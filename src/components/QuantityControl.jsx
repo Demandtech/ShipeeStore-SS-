@@ -1,12 +1,14 @@
 import React from 'react'
 import Button from './Button'
 import { useProductsContext } from '../contexts/productsContext'
+
 import { FaPlus, FaMinus } from 'react-icons/fa'
 import styled from 'styled-components'
 
-const QuantityControl = () => {
-  const { singleProduct, handlequantity } = useProductsContext()
-  const { quantity } = singleProduct
+const QuantityControl = (props) => {
+  const { fetchSingleProduct, singleProduct, handlequantity, isLoading } =
+    useProductsContext()
+ 
   return (
     <Wrapper className='stocks-btns'>
       <Button
@@ -14,7 +16,7 @@ const QuantityControl = () => {
         argument='DEC'
         label={<FaMinus className='icon' />}
       />
-      <span>{quantity}</span>
+      <span>{props.quantity}</span>
       <Button
         onClick={handlequantity}
         argument='INC'

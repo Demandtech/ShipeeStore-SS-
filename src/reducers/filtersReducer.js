@@ -102,15 +102,14 @@ const filterReducer = (state, action) => {
       return {
         ...state,
         filtered_products: tempProducts,
-        itemError: filterError,
       }
     case UPDATE_SORT:
       return { ...state, sort:action.payload }
 
     case SORT_PRODUCTS:
-      const { sort, filtered_products } = state
-    
+      const { sort, filtered_products } = state  
       let tempeProducts = [...filtered_products]
+      
       if (sort === 'price_lowest') {
         tempeProducts = tempeProducts.sort((a, b) => {
           if (a.price < b.price) {
@@ -136,7 +135,8 @@ const filterReducer = (state, action) => {
           return b.title.localeCompare(a.name)
         })
       }
-      return { ...state, filtered_products: tempeProducts }
+      console.log(tempeProducts)
+      return { ...state, filtered_products:tempeProducts }
     default:
       throw new Error(`Unhandled action type: ${action.type}`)
   }
