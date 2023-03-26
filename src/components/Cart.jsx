@@ -61,8 +61,8 @@ const Wrapper = styled.article`
   a {
     color: var(--white);
     background: var(--navyBlue);
-    text-align: center;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .empty {
