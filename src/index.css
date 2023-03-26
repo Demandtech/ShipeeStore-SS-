@@ -11,6 +11,7 @@
 :root {
   --white: #ffffff;
   --navyBlue: #000080;
+  --primary: #000080;
   --transparentNavyBlue: #0000804f;
   --blueWhiteGradient: linear-gradient(to right, var(--white), var(--navyBlue));
   --transition: all 0.3s linear;
@@ -27,12 +28,7 @@ body {
 }
 
 .btn {
-  all: unset;
-  display: block;
-  text-align: center;
-  padding: 0.5rem 0;
-  border-radius: 0.3rem;
-  cursor: pointer;
+  
 }
 
 /* .activeSlide {

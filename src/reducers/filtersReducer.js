@@ -6,6 +6,7 @@ import {
   GET_SELECT_QUERY,
   LOAD_BRANDS,
   UPDATE_SORT,
+  SORT_PRODUCTS
 } from '../actions'
 
 const filterReducer = (state, action) => {
@@ -104,7 +105,11 @@ const filterReducer = (state, action) => {
         itemError: filterError,
       }
     case UPDATE_SORT:
+      return { ...state, sort:action.payload }
+
+    case SORT_PRODUCTS:
       const { sort, filtered_products } = state
+    
       let tempeProducts = [...filtered_products]
       if (sort === 'price_lowest') {
         tempeProducts = tempeProducts.sort((a, b) => {
@@ -118,9 +123,9 @@ const filterReducer = (state, action) => {
           return 0
         })
       }
-      if(sort === 'name-a'){
-        tempeProducts = tempeProducts.sort((a,b)=>{
-          return a.name.localeCompare(b.name)
+      if (sort === 'name-a') {
+        tempeProducts = tempeProducts.sort((a, b) => {
+          return a.title.localeCompare(b.name)
         })
       }
       if (sort === 'price-highest') {
@@ -128,10 +133,10 @@ const filterReducer = (state, action) => {
       }
       if (sort === 'name-z') {
         tempeProducts = tempeProducts.sort((a, b) => {
-          return b.name.localeCompare(a.name)
+          return b.title.localeCompare(a.name)
         })
       }
-      return { ...state, filtered_products:tempeProducts }
+      return { ...state, filtered_products: tempeProducts }
     default:
       throw new Error(`Unhandled action type: ${action.type}`)
   }

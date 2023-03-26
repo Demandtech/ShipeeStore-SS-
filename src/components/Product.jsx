@@ -4,6 +4,7 @@ import Stars from './Stars'
 import { Link } from 'react-router-dom'
 import { formatPrice } from '../utils'
 import { useCartsContext } from '../contexts/cartsContext'
+import Button from './Button'
 
 const Product = ({ title, price, rating, thumbnail, discountPercentage, id }) => {
   let tempTitle = title.split(' ').slice(0, 2).join(' ')
@@ -13,19 +14,17 @@ const Product = ({ title, price, rating, thumbnail, discountPercentage, id }) =>
     <Wrapper>
       <img src={thumbnail} alt={title} />
       <div className='name'>
-        <Link to={`/products/${id}`} >
-          {tempTitle}
-        </Link>
+        <Link to={`/products/${id}`}>{tempTitle}</Link>
         <div>
           <Stars rating={rating} />
         </div>
       </div>
       <span>Price: {formatPrice(price)}</span>
       <div className='btns'>
-        <Link className='buy-btn' to={'/cart'}>
-          Buy Now
+        <Link  to={'/cart'}>
+           <Button label='Buy Now' type='secondary'/>
         </Link>
-        <button onClick={()=> addToCart(id)} className='add-btn'>Add to Cart</button>
+        <Button type='primary' label={'Add to Cart'} onClick={ addToCart} argument={id}/>
       </div>
       <span className='discount'>Discount {discountPercentage}%</span>
     </Wrapper>
@@ -78,46 +77,8 @@ const Wrapper = styled.article`
     justify-content: space-between;
     margin-top: 1rem;
 
-    .add-btn {
-      all: unset;
-      background: var(--navyBlue);
-      color: var(--white);
-      padding: 0.2rem 0.5rem;
-      border-radius: 0.3rem;
-      cursor: pointer;
-      transition: var(--transition);
-      border: 2px solid var(--navyBlue);
-
-      &:hover {
-        background: transparent;
-        color: var(--navyBlue);
-        border: 2px solid var(--navyBlue);
-      }
-
-      &:active {
-        transform: translateY(5px);
-        // background: red;
-      }
-    }
-
-    .buy-btn {
+    a{
       text-decoration: none;
-      border: 2px solid var(--navyBlue);
-      padding: 0.2rem 0.5rem;
-      border-radius: 0.3rem;
-      color: var(--navyBlue);
-      transition: var(--transition);
-
-      &:hover {
-        color: var(--white);
-        background: var(--navyBlue);
-        border: 2px solid var(--navyBlue);
-      }
-
-      &:active {
-        transform: translateY(5px);
-        // background: red;
-      }
     }
   }
 `

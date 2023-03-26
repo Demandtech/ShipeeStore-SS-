@@ -4,8 +4,9 @@ import { useProductsContext } from '../contexts/productsContext'
 import { useCartsContext } from '../contexts/cartsContext'
 import styled from 'styled-components'
 import { formatPrice } from '../utils'
-import { FaCartPlus, FaPlus, FaMinus } from 'react-icons/fa'
+import { FaPlus, FaMinus } from 'react-icons/fa'
 import Loading from '../components/Loading'
+import { Button } from '../components'
 
 const url = 'https://dummyjson.com/products'
 
@@ -72,23 +73,26 @@ const SingleProductPage = () => {
           </div>
           <div className='controls'>
             <div className='stocks-btns'>
-              <button className='btn' onClick={() => handlequantity('DEC')}>
-                <FaMinus className='icon' />
-              </button>
+              <Button
+                onClick={handlequantity}
+                argument='DEC'
+                label={<FaMinus className='icon' />}
+              />
               <span>{quantity}</span>
-              <button className='btn' onClick={() => handlequantity('INC')}>
-                <FaPlus className='icon' />
-              </button>
+              <Button
+                onClick={handlequantity}
+                argument='INC'
+                label={<FaPlus className='icon' />}
+              />
             </div>
             <div className='add-btn'>
-              <button className='btn' onClick={() => singlePageAddToCart()}>
-                <FaCartPlus className='icon' />
-                Add to cart
-              </button>
+              <Button label={'Add to cart'} onClick={singlePageAddToCart} />
             </div>
           </div>
           <div className='btn-link'>
-            <Link to={'/'}>Continu Shopping</Link>
+            <Link to={'/'}>
+              <Button label='Continu Shopping' type='secondary' />
+            </Link>
           </div>
         </div>
       </div>
@@ -235,7 +239,7 @@ const Wrapper = styled.main`
           background: var(--navyBlue);
           color: var(--white);
           border-radius: 0.2rem;
-          padding: 0.1rem 0;
+          padding: 0.1rem 1.5rem;
           box-shadow: 1px 1px 15px var(--navyBlue);
 
           &:hover {
@@ -253,12 +257,12 @@ const Wrapper = styled.main`
       .btn-link {
         margin-top: auto;
         text-align: right;
+
         a {
-          border: 1.5px solid var(--navyBlue);
           text-decoration: none;
-          color: var(--navyBlue);
-          padding: 0.4rem 2rem;
-          border-radius: 0.4rem;
+        }
+        button{
+          padding: .5rem 1.5rem;
         }
       }
     }
@@ -288,6 +292,10 @@ const Wrapper = styled.main`
       .right-wrapper {
         width: 100%;
         padding: 0;
+
+        .btn-link{
+          margin-top: 3rem;
+        }
       }
     }
   }

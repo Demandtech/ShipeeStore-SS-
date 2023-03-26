@@ -7,6 +7,7 @@ import {
   GET_SELECT_QUERY,
   LOAD_BRANDS,
   UPDATE_SORT,
+  SORT_PRODUCTS,
 } from '../actions'
 import {useProductsContext} from '../contexts/productsContext'
 
@@ -18,12 +19,11 @@ const initialState = {
   sort: 'price-lowest',
   category: [],
   brand: [],
-  itemError: {show:false, msg:''},
-  sort: 'price_lowest',
+  itemError: { show: false, msg: '' },
   filters: {
     search_query: '',
-    category_query: 'All',
-    brand_query:''
+    category_query: '',
+    brand_query: '',
   },
 }
 
@@ -42,13 +42,9 @@ export const FiltersProvider = ({ children }) => {
     dispatch({ type: GET_SELECT_QUERY, payload: { cat, bra } })
    }
 
-   const handleFilter = ()=> {
-    dispatch({type: FILTER_PRODUCTS})
-   }
-
    const updateSort = (e)=> {
    const value = e.target.value
-    dispatch({type: UPDATE_SORT})
+    dispatch({type: UPDATE_SORT, payload:value})
    }
   
   useEffect(()=>{
@@ -59,8 +55,13 @@ export const FiltersProvider = ({ children }) => {
     dispatch({ type: LOAD_BRANDS })
   },[state.filters.category_query])
 
+  useEffect(()=>{
+    dispatch({type:SORT_PRODUCTS})
+    dispatch({type:FILTER_PRODUCTS})
+  }, [state.filters, state.sort, products])
+
   return (
-    <FiltersContext.Provider value={{ ...state, handleSearch, handleSelect, handleFilter, updateSort}}>
+    <FiltersContext.Provider value={{ ...state, handleSearch, handleSelect, updateSort}}>
       {children}
     </FiltersContext.Provider>
   )

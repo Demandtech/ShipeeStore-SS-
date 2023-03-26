@@ -2,11 +2,10 @@ import React from 'react'
 import { useCartsContext } from '../contexts/cartsContext'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { CartItem } from '../components'
+import { Button, CartItem } from '../components'
 
 const Cart = () => {
   const { cart } = useCartsContext()
-
 
   if (cart.length < 1) {
     return (
@@ -15,7 +14,7 @@ const Cart = () => {
           <p>Cart is empty</p>
         </div>
         <Link to={'/'} className='btn'>
-          Fill Basket
+          <Button label='Fill Basket' type='primary' />
         </Link>
       </Wrapper>
     )
@@ -23,18 +22,19 @@ const Cart = () => {
   return (
     <Wrapper>
       <div>
-        <h6>Cart</h6> 
-        <div className="cart_list">
-
-        {cart.map((ca, index) => {
-          return (
-            <article key={index} >
-              <CartItem {...ca} />
-            </article>
-          )
-        })}
+        <h6>Cart</h6>
+        <div className='cart_list'>
+          {cart.map((ca, index) => {
+            return (
+              <article key={index}>
+                <CartItem {...ca} />
+              </article>
+            )
+          })}
         </div>
-        <Link to={'/cart'}>Checkout</Link>
+        <Link to={'/cart'}>
+          <Button label='Checkout' type='primary' />
+        </Link>
       </div>
     </Wrapper>
   )
@@ -61,10 +61,10 @@ const Wrapper = styled.article`
   a {
     color: var(--white);
     background: var(--navyBlue);
-    padding: 0.5rem 1rem;
-    display: block;
     text-align: center;
+    display: block;
   }
+
   .empty {
     text-align: center;
     p {

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useFiltersContext } from '../contexts/filtersContext'
 import Select from '../components/Select'
-import { formatPrice } from '../utils'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
+import {Button} from  '../components'
 
 const Filters = () => {
   const [catValue, setCatValue] = useState('Category')
@@ -14,7 +14,6 @@ const Filters = () => {
     category,
     handleSelect,
     handleSearch,
-    handleFilter,
     sort,
     updateSort,
     filters: { search_query },
@@ -22,25 +21,28 @@ const Filters = () => {
 
   useEffect(() => {
     handleSelect(catValue, braValue)
+    // eslint-disable-next-line
   }, [catValue, braValue])
 
   return (
     <Wrapper>
       <div className='left-wrapper'>
-        <div className='view-btns'>
-          <button className={`btn ${grid_view ? 'active-view' : ''}`}>
-            <BsFillGridFill />
-          </button>
-          <button className={`btn ${!grid_view ? 'active-view' : ''}`}>
-            <BsList />
-          </button>
+        <div className='view-btns'>         
+          <Button
+            label={<BsFillGridFill />}
+            className={`btn ${grid_view ? 'active-view' : ''}`}
+          />       
+          <Button
+            label={<BsList />}
+            className={`btn ${!grid_view ? 'active-view' : ''}`}
+          />
         </div>
         <div className='sort'>
           <select value={sort} onChange={updateSort} name='sort' id='sort'>
-            <option value='price-lowest'>price(lowest)</option>
-            <option value='price-highest'>Price(hightes)</option>
-            <option value='name-1'>A - Z</option>
-            <option value='name-z'>Z - A</option>
+            <option value='price-lowest'>price (lowest)</option>
+            <option value='price-highest'>Price (hightest)</option>
+            <option value='name-a'>Name (A - Z)</option>
+            <option value='name-z'>Name (Z - A)</option>
           </select>
         </div>
       </div>
@@ -58,9 +60,6 @@ const Filters = () => {
       <div className='select-control brand'>
         <Select value={braValue} setValue={setBraValue} options={brand} />
       </div>
-      <button onClick={handleFilter} className='submit-btn'>
-        Search
-      </button>
     </Wrapper>
   )
 }

@@ -1,26 +1,29 @@
 import React from 'react'
-import { useUserContext } from '../contexts/userContext'
+//import { useUserContext } from '../contexts/userContext'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Button } from '../components'
 
 const CartItems = () => {
   return (
     <Wrapper>
       <Link className='home-link' to='/'>
-        Continue Shopping
+         <Button label='Continue Shopping' type='secondary'/>
       </Link>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  padding: 3rem;
-  .home-link {
+  a{
     text-decoration: none;
-    border: 2px solid var(--navyBlue);
-    padding: 0.4rem 2rem;
-    color: var(--navyBlue);
+
+    button{
+      padding: .5rem 1.5rem;
+    }
   }
+  padding: 3rem;
+  
 `
 
 export default CartItems

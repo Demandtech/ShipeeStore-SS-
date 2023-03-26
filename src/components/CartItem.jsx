@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { formatPrice } from '../utils'
 import { useCartsContext } from '../contexts/cartsContext'
+import Button from './Button'
 
-const CartItem = ({id,thumbnail, discountPrice, title, quantity}) => {
+const CartItem = ({ id, thumbnail, discountPrice, title, quantity }) => {
   // let tempTitle = title.split(' ').slice(0, 2).join(' ')
   const { deleteCartItem } = useCartsContext()
- 
- 
+
   return (
     <Wrapper>
       <div className='cart_item_wrapper'>
@@ -21,23 +21,29 @@ const CartItem = ({id,thumbnail, discountPrice, title, quantity}) => {
             <span className='price'>{formatPrice(discountPrice)}</span>
             <span>x</span>
             <span className='order'>{quantity}</span>
-            <span className='total'>{formatPrice(discountPrice * quantity)}</span>
+            <span className='total'>
+              {formatPrice(discountPrice * quantity)}
+            </span>
           </div>
         </div>
-        <button className='btn' onClick={()=> deleteCartItem(id)}>
-          <RiDeleteBin6Line />
-        </button>
+       
+        <div className='btn'>
+          <Button
+            onClick={deleteCartItem}
+            argument={id}
+            label={<RiDeleteBin6Line />}
+          />
+        </div>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article`
-  
   .cart_item_wrapper {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     display: flex;
-    
+
     .img-wrapper {
       width: 3rem;
       height: 3rem;
@@ -46,7 +52,7 @@ const Wrapper = styled.article`
       img {
         width: 100%;
         height: 100%;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
       }
     }
 
@@ -66,15 +72,11 @@ const Wrapper = styled.article`
     }
 
     .btn {
-      color: lightgray;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: var(--transition);
       margin-left: auto;
+      transition:var(--transition);
 
-      &:hover {
-        color: var(--navyBlue);
-        transition: var(--transition);
+      &:hover{
+        opacity:0.5;
       }
     }
   }

@@ -36,13 +36,20 @@ const cartsReducer = (state, action) => {
       if (itemIndexToAdd !== -1) {
         let newItems = [...state.cart]
         newItems[itemIndexToAdd] = itemToAdd
-        return { ...state, cart: [...newItems] }
+        return {
+          ...state,
+          cart: [...newItems],
+          cart_notification: { show: true, msg: 'New item add to cart' },
+        }
       } else {
-        return { ...state, cart: [...state.cart, itemToAdd] }
+        return {
+          ...state,
+          cart: [...state.cart, itemToAdd],
+          cart_notification: { show: true, msg: 'New item add to cart' },
+        }
       }
 
     case DELETE_CART_ITEM:
-      console.log('clicked')
       return {
         ...state,
         cart: state.cart.filter((ca) => ca.id !== action.payload),

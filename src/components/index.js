@@ -7,6 +7,7 @@ import Product from './Product'
 import Stars from './Stars'
 import CartItem from './CartItem'
 import CartNotification from './CartNotification'
+import Button from './Button'
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Stars,
   CartItem,
   CartNotification,
+  Button
 }
